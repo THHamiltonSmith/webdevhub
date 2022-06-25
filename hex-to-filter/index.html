@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+    <!-- Tab Settings -->
+    <title>Hex to CSS Filter - WebDevHub</title>
+    <link rel="shortcut icon" type="image/png" href="../icons/256x256.jpg"/>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="../luna-framework.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+</head>
+
+<body>
+    <nav>
+        <input type="image" class="navbar-toggler nav-icons" id="navbar-toggler" src="../icons/menu.png">
+            <li class="nav-brand">
+                <img class="nav-icons" src="../icons/256x256.jpg">
+                <a href="">WebDevHub</a>
+            </li>
+            <div class="collapsible">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/THHamiltonSmith/webdevhub">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.skyenterprisesau.com">Sky Enterprises</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+        <div class="index-main">
+            <div class="main-content-container">
+                <div class="feature-main-header main-header">
+                    <h1>Hex to CSS <code>filter:</code></h1>
+                    <span>Convert a Hex color into a CSS <code>filter:</code> component to recolor images without 
+                    having to make a new one.</span>
+                    <hr>
+                </div>
+ 
+                <div class="hex-to-filter">
+                    <div class="hex-to-filter-main-content">
+                        <label>Target color</label>
+                        <input class="target" type="text" placeholder="Target hex" value="#00a4d6">
+                        <button onclick="executeFilter();" class="execute">Compute Filters</button>
+    
+                        <p>Real pixel, color applied through CSS <code>background-color:</code></p>
+                        <div class="pixel realPixel"></div>
+                    
+                        <p>Filtered pixel, color applied through CSS <code>filter:</code></p>
+                        <div class="pixel filterPixel"></div>
+                    
+                        <br><br><br><br>
+                        <code class="filterDetail">filter: </code>
+                        <p class="lossDetail"></p>
+                    </div>
+
+                    <div class="hex-to-filter-disclaimer">
+                        <p>For this code to work well, the starting color of your icon needs to be black. 
+                            If your icon set isn't black you can prepend <code class="hex-to-filter-disclaimer-code">brightness(0) saturate(100%)</code> 
+                            to your filter property which will first turn the icon set to black. See the example below</p>
+                            <pre>
+                                <code>
+<!--                            --><span class="pre-title">.nav-icons img</span> {  <span class="pre-comment">// Your image/icon css</span>
+<!--                            -->    <span class="pre-variable">width</span>: <span class="pre-variable-value">25px</span>;
+<!--                            -->    <span class="pre-variable">height</span>: <span class="pre-variable-value">25px</span>;
+<!--                            -->    <span class="pre-variable">filter</span>: <span class="pre-variable-special">brightness</span>(<span class="pre-variable-value">0</span>) <span class="pre-variable-special">saturate</span>(<span class="pre-variable-value">100%</span>);           <span class="pre-comment">// Prepended filter</span>
+<!--                            -->    <span class="pre-variable">filter</span>: <span class="pre-variable-special">invert</span>(<span class="pre-variable-value">40%</span>) <span class="pre-variable-special">sepia</span>(<span class="pre-variable-value">89%</span>) <span class="pre-variable-special">contrast</span>(<span class="pre-variable-value">109%</span>);  <span class="pre-comment">// Filter</span>
+<!--                            -->}
+                                </code>
+                            </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <span>&copy; WebDevHub 2022. All rights reserved. <span>&middot;</span> Brought to you by <a href="https://www.skyenterprisesau.com">Sky Enterprises</a></span>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="hexToFilter.js"></script>
+
+    </body>
+
+</html>

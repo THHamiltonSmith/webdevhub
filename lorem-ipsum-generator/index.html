@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+        <!-- Tab Settings -->
+        <title>Lorem Ipsum Generator- WebDevHub</title>
+        <link rel="shortcut icon" type="image/png" href="../icons/256x256.jpg"/>
+
+        <!-- Meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS & JS -->
+        <link rel="stylesheet" href="../luna-framework.css" />
+        <link rel="stylesheet" href="../style.css" />
+    
+    </head>
+
+    <body>
+        <nav>
+            <input type="image" class="navbar-toggler nav-icons" id="navbar-toggler" src="../icons/menu.png">
+                <li class="nav-brand">
+                    <img class="nav-icons" src="../icons/256x256.jpg">
+                    <a href="">WebDevHub</a>
+                </li>
+                <div class="collapsible">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/THHamiltonSmith/webdevhub">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.skyenterprisesau.com">Sky Enterprises</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+        <div class="index-main">
+            <div class="lorem-ipsum main-content-container">
+                <div class="feature-main-header main-header">
+                    <h1>Lorem Ipsum Generator</h1>
+                    <span>Generate dummy text for your website.</span>
+                    <hr>
+                </div>
+                <div class="lorem-ipsum-controls">
+                  <span>Paragraphs:</span>
+                  <input type="number" id="paragraph-count" value="2">
+                  <input type="button" value="Generate Text" onclick="generateIpsum();">
+                </div>
+                <div id="paragraph-container">
+                    <!-- Paragraphs Go Here -->
+                    <p>No text generated. Press the 'Generate' button to generate some Lorem Ipsum text.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <span>&copy; WebDevHub 2022. All rights reserved. <span>&middot;</span> Brought to you by <a href="https://www.skyenterprisesau.com">Sky Enterprises</a></span>
+        </footer>
+
+        <script src="loremIpsumGenerator.js"></script>
+
+    </body>
+
+</html>

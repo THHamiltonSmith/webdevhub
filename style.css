@@ -1,0 +1,400 @@
+
+/* Main HTML Styling */
+body {
+    position: relative;
+}
+.index-main {
+    padding: 40px;
+    padding-top: 55px;
+    padding-bottom: 120px;
+    min-height: calc(100vh - 80px);
+}
+.link-icon {
+    filter: invert(47%) sepia(8%) saturate(0%) hue-rotate(297deg) brightness(97%) contrast(93%);
+    margin-bottom: 0px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Header */
+.main-header {
+    margin-top: 70px;
+    text-align: center;
+}
+.main-header h1 {
+    font-size: 32px;
+}
+.main-header span {
+    color: #888;
+}
+.main-header hr {
+    margin-top: 50px;
+    border: 2px solid #555;
+}
+.disclaimer {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #888;
+}
+.disclaimer a {
+    color: #999;
+    transition: 0.2s;
+}
+.disclaimer a:hover {
+    color: #bbb;
+}
+
+/* Feature Buttons */
+.feature-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.feature-container a {
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 245px;
+    background-color: #303e51;
+    color: #eee;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.feature-container a:hover {
+    background-color: #3d526f;
+    box-shadow: none;
+}
+.feature-container a span {
+    font-weight: 600;
+}
+.feature-container a p {
+    color: #aaa;
+    margin-bottom: 0px;
+    line-height: 21px;
+}
+.feature-container a code {
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+    background-color: #4c6e9e;
+    font-size: 15px;
+}
+.feature-container a p code {
+    display: inline;
+    background-color: transparent;
+}
+.functional {
+    box-shadow: 0 0 0 1px #00a2ff;
+}
+
+/* Main Feature Styling */
+.main-content-container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.feature-main-header {
+    margin-top: 20px;
+}
+
+/* Feature Rows */
+.feature-row {
+    position: relative;
+    margin-top: 50px;
+}
+.feature-row:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background-image: linear-gradient(to right, transparent, 98%, #171e27);
+}
+.feature-row h2 {
+    margin-bottom: 10px;
+}
+.feature-row span:nth-child(2) {
+    color: #aaa;
+}
+.feature-row hr {
+    margin-top: 10px;
+}
+.feature-row hr:last-child {
+    border: 1px solid #333;
+}
+.feature-row-content {
+    overflow-x: scroll;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+.feature-row-content::-webkit-scrollbar {
+    display: none;
+}
+.feature-row-content-divider {
+    margin-left: 6px;
+    margin-right: 6px;
+    min-height: 100%;
+    width: 4px;
+    background-color: #555;
+    align-self: stretch;
+}
+.feature-row-content a {
+    flex-shrink: 0;
+    height: 0%;
+    padding-bottom: 23px;
+}
+
+
+/* Word Counter */
+.word-counter textarea, .word-counter-header, .word-counter-footer {
+    padding: 10px;
+    padding-left: 16px;
+    border-radius: 10px;
+    width: 100%;
+    color: #ddd;
+    resize: none;
+}
+.word-counter {
+    display: flex;
+    padding-top: 25px;
+    width: 100%;
+}
+.word-counter-container {
+    flex-basis: 85%;
+    padding-right: 50px;
+}
+.word-counter textarea {
+    padding-top: 15px;
+    background-color: #273240;
+    box-shadow: 0 8px 6px -2px #14181e;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.word-counter textarea:focus {
+    box-shadow: 0 0 0 1px #00a2ff;
+}
+.word-counter-header {
+    margin-bottom: 15px;
+    background-color: #5775d6;
+    box-shadow: 0 8px 6px -2px #11182c;
+    color: #e7e7e7;
+}
+.word-counter-footer {
+    margin-top: 8px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 13px;
+    font-weight: 500;
+    width: 100%;
+    background-color: #1f2630;
+    box-shadow: 0 8px 6px -2px #161b21;
+}
+.word-counter-sidebar {
+    border-radius: 10px;
+    height: 0%;    
+    width: 320px;
+    background-color: #324560;
+    box-shadow: 0 8px 6px -2px #11161e;
+}
+.word-counter-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+.word-counter-sidebar-header {
+    border-radius: 10px 10px 0 0;
+    background-color: #242c38;
+    font-weight: 600;
+    font-size: 16px !important;
+    border-bottom: none !important;
+}
+.word-counter-sidebar li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 16px;
+    border-bottom: 2px solid #4f688d;
+    font-size: 15px;
+}
+.word-counter-sidebar li:last-child {
+    border: none;
+}
+.word-counter-sidebar li span {
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    background-color: #475d7e;
+    font-size: 13px;
+    line-height: 23px;
+}
+
+
+/* Lorem Ipsum Generator */
+.lorem-ipsum p {
+    margin-bottom: 20px;
+    text-align: justify !important;
+}
+.lorem-ipsum input {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #29384c;
+    color: #e7e7e7;
+}
+.lorem-ipsum input[type=number] {
+    width: 45px;
+    text-align: center;
+}
+.lorem-ipsum input:focus {
+    box-shadow: 0 0 0 1px #00a2ff;
+}
+.lorem-ipsum input[type=button] {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 10px;
+}
+/* Chrome, Safari, Edge, Opera */
+.lorem-ipsum input::-webkit-outer-spin-button,
+.lorem-ipsum input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.lorem-ipsum-controls {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    padding-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #5775d6;
+    box-shadow: 0 8px 6px -2px #11182c;
+    color: #e7e7e7;
+}
+.lorem-ipsum-controls span {
+    margin-right: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.lorem-ipsum-controls .word-count {
+    position: absolute;
+    right: 15px;
+}
+#paragraph-container {
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    min-height: 60px;
+    border-radius: 10px;
+    background-color: #273240;
+    box-shadow: 0 8px 6px -2px #14181e;
+}
+#paragraph-container p {
+    color: #ddd;
+}
+
+/* Hex to Filter */
+.pixel {
+    display: inline-block;
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+}
+.filterDetail {
+    margin-top: 10px;
+    margin-left: 0px !important;
+    font-family: "Consolas", "Menlo", "Ubuntu Mono", monospace;
+}
+.hex-to-filter {
+    position: relative;
+    display: flex;
+    margin-top: 25px;
+}
+.hex-to-filter button, input {
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.hex-to-filter button {
+    margin-bottom: 20px;
+    background-color: #008cff;
+    color: #fff;
+    font-weight: 500;
+}
+.hex-to-filter input {
+    margin-right: 5px;
+    width: 100px;
+    background-color: #ccc;
+}
+.hex-to-filter label {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.hex-to-filter-main-content {
+    flex-basis: 100%;
+}
+.hex-to-filter-main-content code {
+    background-color: #354966;
+    margin-left: 5px;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+}
+.hex-to-filter-disclaimer {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #303e51;
+    color: #aaa;
+}
+.hex-to-filter-disclaimer-code {
+    padding: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: #222831;
+}
+.hex-to-filter-disclaimer p {
+    margin-top: 0px;
+    line-height: 20px;
+}
+.hex-to-filter-disclaimer pre {
+    padding-left: 30px;
+    margin-bottom: 0px;
+    background-color: #222831;
+}
+.pre-title {
+    color: rgb(207, 179, 121);
+}
+.pre-variable {
+    color: rgb(157, 220, 254);
+}
+.pre-variable-value {
+    color: rgb(182, 206, 168);
+}
+.pre-variable-special {
+    color: rgb(221, 220, 170);
+}
+.pre-comment {
+    color: rgb(107, 153, 85);
+}
