@@ -8,6 +8,8 @@ body {
     padding-top: 55px;
     padding-bottom: 120px;
     min-height: calc(100vh - 80px);
+    max-width: 1300px;
+    margin: auto;
 }
 .link-icon {
     filter: invert(47%) sepia(8%) saturate(0%) hue-rotate(297deg) brightness(97%) contrast(93%);
