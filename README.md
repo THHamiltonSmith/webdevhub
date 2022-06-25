@@ -21,7 +21,6 @@ A central hub with all the tools a developer might need makes it easier to focus
 ### Planned Features
 - Code Formatter (HTML, CSS, JS, etc.)
 - XML - JSON - ymal converter
-- JSON to ymal converter
 - Image Converter
 - Color Converter (Hex to RGB etc.)
 - URL Shortner
