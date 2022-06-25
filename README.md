@@ -46,7 +46,20 @@ To contribute to the site:
 1. Clone the repository via terminal or github desktop.
 2. Create a new folder with your feature name (e.g `image-converter`) and create a `feature-name.js` and `index.html` file.
 3. Code your feature
-4. Add a link to the featyre on the home page under a relevant subcategory.
+4. Add a link to the feature on the home page under a relevant subcategory.
+5. Add the Google Analytics tracking script below to the `<head>` tag of your page to make it easier for us to track the sites performance.
+
+```html
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN1VD8C61E"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LN1VD8C61E');
+  </script>
+```
 
 ### Rules/Guidelines for contributing
 
