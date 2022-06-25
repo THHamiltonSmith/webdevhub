@@ -110,6 +110,7 @@ body {
 .feature-row {
     position: relative;
     margin-top: 50px;
+    overflow: hidden;
 }
 .feature-row:after {
     content: '';
@@ -134,15 +135,18 @@ body {
     border: 1px solid #333;
 }
 .feature-row-content {
-    overflow-x: scroll;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     padding-right: 10px;
     padding-bottom: 5px;
+    overflow-x: auto;
+    cursor:pointer;
 }
 .feature-row-content::-webkit-scrollbar {
-    display: none;
+    width: 20px;
+    box-shadow: inset 0 0 5px #303e51;
+    border-radius: 10px;
 }
 .feature-row-content-divider {
     margin-left: 6px;
