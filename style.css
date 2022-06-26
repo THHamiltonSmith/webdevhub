@@ -443,7 +443,11 @@ body {
     align-items: center;
 }
 
+.image-convertor-submit label {
+    margin: 12px;
+}
+
 .image-convertor-convert {
     color: white;
-    margin: 10px;
+    margin: 12px;
 }

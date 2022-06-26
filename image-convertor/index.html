@@ -64,26 +64,30 @@
 
                 <!-- upload image and preview-->
                 <div class="image-convertor">
+
+                    <!-- loadfile -->
                     <input class="image-converter-loadfile" id="loadfile" type="file" accept="image/png, image/jpeg">
+
+                    <!-- image preview -->
                     <div class="image-convertor-preview-container" id="preview-container">
                         <img src="" class="image-converter-preview-image" id="preview-image">
                         <span id="preview-text">Preview Image</span>
                     </div>
 
-                    <div class="image-convertor-submit">
-                        <input class="image-convertor-convert" type="submit" value="Convert">
-                        <form>  
-                            <label for="image-convertor-format">Select format</label>  
-                            <select id="image-convertor-format">
-                                <option value = "none">-- choose --</option>
-                                <option value = "png">PNG</option> 
-                                <option value = "jpeg">JPEG</option>
-                                <option value = "bmp">BMP</option>
-                                <option value = "tiff">TIFF</option>
-                            </select>  
-                            </form>
-                        </div>
+                    <!-- convert format -->
+                    <div class="image-convertor-submit">  
+                        <label for="format">Select format</label>   
+                        <select id="format">
+                            <option value = "none">-- choose --</option>
+                            <option value = "png">PNG</option> 
+                            <option value = "jpeg">JPEG</option>
+                            <option value = "bmp">BMP</option>
+                            <option value = "tiff">TIFF</option>
+                        </select>
+                        <input class="image-convertor-convert" id="convert" type="submit" value="Convert">
                     </div>
+
+                    <div class="image-converter-error" id="error"></div>
                 </div>
             </div>
         </div>
