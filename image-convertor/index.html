@@ -64,10 +64,14 @@
 
                 <!-- upload image and preview-->
                 <div class="image-convertor">
-                    <input type="file" accept="image/png, image/jpeg">
-                    <img class="image-convertor-preview" alt="No Image Chosen">
-                    <div class="image-convertor-choose">
-                        <input class="image-convertor-submit" type="submit" value="Convert">
+                    <input class="image-converter-loadfile" id="loadfile" type="file" accept="image/png, image/jpeg">
+                    <div class="image-convertor-preview-container" id="preview-container">
+                        <img src="" class="image-converter-preview-image" id="preview-image">
+                        <span id="preview-text">Preview Image</span>
+                    </div>
+
+                    <div class="image-convertor-submit">
+                        <input class="image-convertor-convert" type="submit" value="Convert">
                         <form>  
                             <label for="image-convertor-format">Select format</label>  
                             <select id="image-convertor-format">
@@ -89,5 +93,7 @@
             <span>&copy; WebDevHub 2022. All rights reserved. <span>&middot;</span> Brought to you by <a href="https://www.skyenterprisesau.com">Sky Enterprises</a></span>
         </footer>
 
+        <!-- Scripts -->
+        <script src="imageConvertor.js"></script>
     </body>
 </html>

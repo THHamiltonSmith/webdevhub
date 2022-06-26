@@ -417,28 +417,33 @@ body {
     padding: 10px;
 }
 
-.image-convertor input {
+.image-converter-loadfile {
     background-color: #14151a;
 }
 
-.image-convertor-preview {
+.image-convertor-preview-container {
     background-color: #25303e;
     border-radius: 8px;
     border: 3px solid #14151a;
     width: 50%;
-    height: 300px;
+    min-height: 300px;
     margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-convertor-choose {
+.image-converter-preview-image {
+    display: none;
+    width: 100%;
+}
+
+.image-convertor-submit {
     display: flex;
     align-items: center;
 }
 
-.image-convertor-submit {
+.image-convertor-convert {
     color: white;
     margin: 10px;
 }
