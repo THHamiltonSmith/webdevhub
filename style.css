@@ -1,4 +1,3 @@
-
 /* Main HTML Styling */
 body {
     position: relative;
@@ -141,12 +140,16 @@ body {
     padding-right: 10px;
     padding-bottom: 5px;
     overflow-x: auto;
-    cursor:pointer;
+    cursor: pointer;
 }
 .feature-row-content::-webkit-scrollbar {
     width: 20px;
     box-shadow: inset 0 0 5px #303e51;
     border-radius: 10px;
+}
+.feature-row-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px #3a4d66;
 }
 .feature-row-content-divider {
     margin-left: 6px;
