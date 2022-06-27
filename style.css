@@ -151,6 +151,9 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 0 5px #3a4d66;
 }
+.feature-row-content::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 5px #41648e;
+}
 .feature-row-content-divider {
     margin-left: 6px;
     margin-right: 6px;
@@ -476,6 +479,9 @@ body {
 .image-converter-download {
     display: none;
     margin: 20px;
+}
+
+.image-converter-download button {
     width: 400px;
     height: 50px;
     background-color: #5775d6;
