@@ -61,6 +61,14 @@ To contribute to the site:
   </script>
 ```
 
+6. (Optional) - Credit yourself at the bottom of your feature using this sample code. Have a look <a href="https://thhamiltonsmith.github.io/webdevhub/image-converter/">here</a> for an example of how it is done.
+
+```html
+  <!-- User Credit -->
+  <hr class="credit-hr">
+  <span class="credit-link">Feature added by <a href="https://github.com/your-username">@your-username</a></span>
+```
+
 ### Rules/Guidelines for contributing
 
 - Try to follow the site's colour scheme.
