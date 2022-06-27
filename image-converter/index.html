@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- Tab Settings -->
+        <title>Image Converter - WebDevHub</title>
+        <link rel="shortcut icon" type="image/png" href="../icons/256x256.jpg" />
+
+        <!-- Meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS & JS -->
+        <link rel="stylesheet" href="../luna-framework.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN1VD8C61E"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LN1VD8C61E');
+        </script>
+
+    </head>
+
+    <body>
+        <!-- common navbar -->
+        <nav>
+            <input type="image" class="navbar-toggler nav-icons" id="navbar-toggler" src="../icons/menu.png">
+            <li class="nav-brand">
+                <img class="nav-icons" src="../icons/256x256.jpg">
+                <a href="">WebDevHub</a>
+            </li>
+            <div class="collapsible">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/THHamiltonSmith/webdevhub">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.skyenterprisesau.com">Sky Enterprises</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="index-main">
+            <div class="main-content-container">
+
+                <!-- title and description -->
+                <div class="feature-main-header main-header">
+                    <h1>Image Converter</h1>
+                    <span>Convert an image to jpg, png and other formats.</span>
+                    <div class="disclaimer-box">
+                        <p><strong>Disclaimer: </strong>This feature is currently unavailable due to the lack of 
+                            server-side integration on the site. Server-side code will be implemented in the future 
+                            as the site scales.</p>
+                    </div>
+                    <hr>
+                    <br>
+                    <span>Upload an image...</span>
+                    <br>
+                </div>
+
+                <!-- upload image and preview-->
+                <div class="image-converter">
+
+                    <!-- loadfile -->
+                    <input class="image-converter-loadfile" id="loadfile" type="file" accept="image/png, image/jpeg">
+
+                    <!-- image preview -->
+                    <div class="image-converter-preview-container" id="preview-container">
+                        <img src="" class="image-converter-preview-image" id="preview-image">
+                        <span id="preview-text">Preview Image</span>
+                    </div>
+
+                    <!-- convert format -->
+                    <div class="image-converter-convert">
+
+                        <!-- dropdown menu -->
+                        <label for="format">Select format</label>   
+                        <select id="format">
+                            <option value = "none">-- choose --</option>
+                            <option value = "png">PNG</option> 
+                            <option value = "jpeg">JPEG</option>
+                            <option value = "bmp">BMP</option>
+                            <option value = "tiff">TIFF</option>
+                        </select>
+
+                        <!-- convert button -->
+                        <button class="image-converter-submit" id="submit" type="submit">Convert</button>
+                    </div>
+
+                    <!-- Warning message -->
+                    <div class="image-converter-error" id="error">
+                        <img src="../icons/warning.png">
+                        <span id="error-text"></span>
+                    </div>
+
+                    <!-- Completion message -->
+                    <div class="image-converter-success" id="success">
+                        <img src="../icons/check.png">
+                        <span id="success-text"></span>
+                    </div>
+
+                    <!-- Download converted image -->
+                    <a class="image-converter-download"  id="download" href="" download="bro">
+                        <button>Download</button>
+                    </a>
+
+                    <!-- User Credit -->
+                    <hr class="credit-hr">
+                    <span class="credit-link">Feature added by <a href="https://github.com/foobar41">@foobar41</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <span>&copy; WebDevHub 2022. All rights reserved. <span>&middot;</span> Brought to you by <a href="https://www.skyenterprisesau.com">Sky Enterprises</a></span>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="imageConverter.js"></script>
+    </body>
+</html>

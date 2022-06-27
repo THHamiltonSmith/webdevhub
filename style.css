@@ -16,6 +16,21 @@ body {
     width: 20px !important;
     height: 20px !important;
 }
+.credit-hr {
+    margin-top: 20px;
+    width: 100%;
+}
+.credit-link {
+    margin-top: 10px;
+    color: #999;
+}
+.credit-link a {
+    color: #bbb;
+    transition: 0.2s;
+}
+.credit-link a:hover {
+    color: #ccc;
+}
 
 /* Header */
 .main-header {
@@ -409,4 +424,91 @@ body {
 }
 .pre-comment {
     color: rgb(107, 153, 85);
+}
+
+/* Image Converter */
+.image-converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-converter-loadfile {
+    background-color: #14151a;
+}
+
+.image-converter-preview-container {
+    background-color: #25303e;
+    border-radius: 8px;
+    border: 3px solid #14151a;
+    width: 50%;
+    min-height: 300px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-converter-preview-image {
+    display: none;
+    width: 100%;
+}
+
+.image-converter-convert {
+    display: flex;
+    align-items: center;
+}
+
+.image-converter-convert label {
+    margin: 12px;
+}
+
+.image-converter-submit {
+    background-color: #14151a;
+    color: white;
+    margin: 12px;
+}
+
+.image-converter-error img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    padding: auto;
+} 
+
+.image-converter-success img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    padding: auto;
+}
+
+.image-converter-error, .image-converter-success {
+    display: none; /* will change to display flex based on conditions */
+    align-items: center;
+    margin: 10px;
+}
+
+.image-converter-download {
+    display: none;
+    margin: 20px;
+}
+
+.image-converter-download button {
+    width: 400px;
+    height: 50px;
+    background-color: #5775d6;
+    color: white;
+}
+.disclaimer-box {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 80%;
+    background-color: #243142;
+    box-shadow: 0 8px 6px -2px #14181e;
 }
