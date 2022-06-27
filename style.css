@@ -16,6 +16,21 @@ body {
     width: 20px !important;
     height: 20px !important;
 }
+.credit-hr {
+    margin-top: 20px;
+    width: 100%;
+}
+.credit-link {
+    margin-top: 10px;
+    color: #999;
+}
+.credit-link a {
+    color: #bbb;
+    transition: 0.2s;
+}
+.credit-link a:hover {
+    color: #ccc;
+}
 
 /* Header */
 .main-header {
@@ -486,4 +501,14 @@ body {
     height: 50px;
     background-color: #5775d6;
     color: white;
+}
+.disclaimer-box {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 80%;
+    background-color: #243142;
+    box-shadow: 0 8px 6px -2px #14181e;
 }
