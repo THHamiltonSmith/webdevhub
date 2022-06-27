@@ -4,7 +4,7 @@
     <head>
 
         <!-- Tab Settings -->
-        <title>Image Convertor - WebDevHub</title>
+        <title>Image Converter - WebDevHub</title>
         <link rel="shortcut icon" type="image/png" href="../icons/256x256.jpg" />
 
         <!-- Meta tags -->
@@ -52,9 +52,10 @@
 
         <div class="index-main">
             <div class="main-content-container">
+
                 <!-- title and description -->
                 <div class="feature-main-header main-header">
-                    <h1>Image Convertor</h1>
+                    <h1>Image Converter</h1>
                     <span>Convert an image to jpg, png and other formats.</span>
                     <hr>
                     <br>
@@ -63,19 +64,19 @@
                 </div>
 
                 <!-- upload image and preview-->
-                <div class="image-convertor">
+                <div class="image-converter">
 
                     <!-- loadfile -->
                     <input class="image-converter-loadfile" id="loadfile" type="file" accept="image/png, image/jpeg">
 
                     <!-- image preview -->
-                    <div class="image-convertor-preview-container" id="preview-container">
+                    <div class="image-converter-preview-container" id="preview-container">
                         <img src="" class="image-converter-preview-image" id="preview-image">
                         <span id="preview-text">Preview Image</span>
                     </div>
 
                     <!-- convert format -->
-                    <div class="image-convertor-submit">  
+                    <div class="image-converter-convert">  
                         <label for="format">Select format</label>   
                         <select id="format">
                             <option value = "none">-- choose --</option>
@@ -84,10 +85,23 @@
                             <option value = "bmp">BMP</option>
                             <option value = "tiff">TIFF</option>
                         </select>
-                        <input class="image-convertor-convert" id="convert" type="submit" value="Convert">
+                        <button class="image-converter-submit" id="submit" type="submit">Convert</button>
                     </div>
 
-                    <div class="image-converter-error" id="error"></div>
+                    <!-- Warning message -->
+                    <div class="image-converter-error" id="error">
+                        <img src="../icons/warning.png">
+                        <span id="error-text"></span>
+                    </div>
+
+                    <!-- Completion message -->
+                    <div class="image-converter-success" id="success">
+                        <img src="../icons/check.png">
+                        <span id="success-text"></span>
+                    </div>
+
+                    <!-- Download converted image -->
+                    <button class="image-converter-download" id="download">Download</button>
                 </div>
             </div>
         </div>
@@ -98,6 +112,6 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="imageConvertor.js"></script>
+        <script src="imageConverter.js"></script>
     </body>
 </html>

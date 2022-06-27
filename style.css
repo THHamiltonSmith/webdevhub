@@ -408,8 +408,8 @@ body {
     color: rgb(107, 153, 85);
 }
 
-/* Image Convertor */
-.image-convertor {
+/* Image Converter */
+.image-converter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -421,7 +421,7 @@ body {
     background-color: #14151a;
 }
 
-.image-convertor-preview-container {
+.image-converter-preview-container {
     background-color: #25303e;
     border-radius: 8px;
     border: 3px solid #14151a;
@@ -438,16 +438,46 @@ body {
     width: 100%;
 }
 
-.image-convertor-submit {
+.image-converter-convert {
     display: flex;
     align-items: center;
 }
 
-.image-convertor-submit label {
+.image-converter-convert label {
     margin: 12px;
 }
 
-.image-convertor-convert {
+.image-converter-submit {
+    background-color: #14151a;
     color: white;
     margin: 12px;
+}
+
+.image-converter-error img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    padding: auto;
+} 
+
+.image-converter-success img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    padding: auto;
+}
+
+.image-converter-error, .image-converter-success {
+    display: none; /* will change to display flex based on conditions */
+    align-items: center;
+    margin: 10px;
+}
+
+.image-converter-download {
+    display: none;
+    margin: 20px;
+    width: 400px;
+    height: 50px;
+    background-color: #5775d6;
+    color: white;
 }
