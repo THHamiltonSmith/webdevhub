@@ -76,7 +76,9 @@
                     </div>
 
                     <!-- convert format -->
-                    <div class="image-converter-convert">  
+                    <div class="image-converter-convert">
+
+                        <!-- dropdown menu -->
                         <label for="format">Select format</label>   
                         <select id="format">
                             <option value = "none">-- choose --</option>
@@ -85,6 +87,8 @@
                             <option value = "bmp">BMP</option>
                             <option value = "tiff">TIFF</option>
                         </select>
+
+                        <!-- convert button -->
                         <button class="image-converter-submit" id="submit" type="submit">Convert</button>
                     </div>
 
@@ -101,7 +105,9 @@
                     </div>
 
                     <!-- Download converted image -->
-                    <button class="image-converter-download" id="download">Download</button>
+                    <a class="image-converter-download"  id="download" href="" download="bro">
+                        <button>Download</button>
+                    </a>
                 </div>
             </div>
         </div>
