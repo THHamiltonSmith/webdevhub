@@ -17,11 +17,11 @@ A central hub with all the tools a developer might need makes it easier to focus
 - Hex to css `filter:` converter
 - Word Counter
 - Lorem Ipsum Generator
+- Code Formatter (HTML, CSS, JS, etc.)
 
 ### Planned Features
-- Code Formatter (HTML, CSS, JS, etc.)
 - XML - JSON - ymal converter
-- Image Converter
+- Image Converter *- UI implemented but needs server-side code to fix*
 - Color Converter (Hex to RGB etc.)
 - URL Shortner
 - File Compressors
