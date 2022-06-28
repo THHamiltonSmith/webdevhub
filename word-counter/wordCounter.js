@@ -96,7 +96,7 @@ function readingTime() {
     } else if (readingTimeSeconds > 60) {
         if (readingTimeSeconds > 3600) {
             var hours = Math.floor(readingTimeSeconds / 3600);
-            var minutes = Math.round(readingTimeSeconds - hours * 3600);
+            var minutes = Math.round((readingTimeSeconds - hours * 3600) / 60);
 
             readingTimeObj.innerText = hours + " hrs " + minutes + " mins";
         } else {
@@ -117,7 +117,7 @@ function speakingTime() {
     } else if (speakingTimeSeconds > 60) {
         if (speakingTimeSeconds > 3600) {
             var hours = Math.floor(speakingTimeSeconds / 3600);
-            var minutes = Math.round(speakingTimeSeconds - hours * 3600);
+            var minutes = Math.round((speakingTimeSeconds - hours * 3600) / 60);
 
             speakingTimeObj.innerText = hours + " hrs " + minutes + " mins";
         } else {
