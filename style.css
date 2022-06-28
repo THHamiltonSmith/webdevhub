@@ -16,8 +16,11 @@ body {
     width: 20px !important;
     height: 20px !important;
 }
+.credit-box {
+    text-align: center;
+}
 .credit-hr {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
 }
 .credit-link {
@@ -511,4 +514,69 @@ body {
     width: 80%;
     background-color: #243142;
     box-shadow: 0 8px 6px -2px #14181e;
+}
+
+/* Code Formatter */
+.code-formatter-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.code-formatter-container textarea {
+    width: 100%;
+    background-color: #262626;
+}
+.formatter-container {
+    flex: 1; /* formerly flex: 1 0 auto; */
+}
+.formatter-container div {
+    max-width: 590px !important;
+}
+.code-formatter-controls {
+    margin-top: 15px;
+    text-align: center;
+}
+.code-formatter-controls input[type=button] {
+    margin-left: 40px;
+    background-color: #008cff;
+    color: #e7e7e7;
+    transition: 0.2s;
+}
+.code-formatter-controls input, .code-formatter-controls select {
+    margin-left: 10px;
+}
+.code-formatter-controls input[type=button]:hover {
+    background-color: #00a2ff;
+}
+.code-formatter-header {
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    gap: 20px;
+}
+.code-formatter-header span {
+    flex-basis: 50%;
+    font-weight: 600;
+}
+.CodeMirror {
+    padding-top: 4px;
+}
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none !important;
+}
+.CodeMirror-gutters {
+    padding-right: 6px;
+}
+.CodeMirror-line {
+    padding-left: 12px !important;
+}
+.CodeMirror-simplescroll-horizontal, .CodeMirror-simplescroll-vertical {
+    background-color: #243142;
+}
+.CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {
+    background-color: #324560;
+    border: 1px solid #273240;
+}
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler {
+    background-color: #1f2630;
 }

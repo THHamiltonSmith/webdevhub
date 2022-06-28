@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+        <!-- Tab Settings -->
+        <title>Code Formatter - WebDevHub</title>
+        <link rel="shortcut icon" type="image/png" href="../icons/256x256.jpg"/>
+
+        <!-- Meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS & JS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/theme/lesser-dark.min.css" integrity="sha512-rcv22E/xD3QRYj/qKfy+mAlmCF45muYFRPBXJL7hv2F7Sn9k/VKK2070s0bhZOWOKbasRAhLdDCRFQFMMJEhug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/scroll/simplescrollbars.min.css" integrity="sha512-2y3NTsei81d5emn5nwrdflyI5EGULwKXRZ0BCbO55cjgQ8x62X4ydH/jbnzrKnxArstf79F9n6z1j2MtVmJ8YA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../luna-framework.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN1VD8C61E"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LN1VD8C61E');
+        </script>
+    
+    </head>
+
+    <body>
+        <nav>
+            <input type="image" class="navbar-toggler nav-icons" id="navbar-toggler" src="../icons/menu.png">
+                <li class="nav-brand">
+                    <img class="nav-icons" src="../icons/256x256.jpg">
+                    <a href="">WebDevHub</a>
+                </li>
+                <div class="collapsible">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/THHamiltonSmith/webdevhub">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.skyenterprisesau.com">Sky Enterprises</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+        <div class="index-main">
+            <div class="main-content-container">
+                <div class="feature-main-header main-header">
+                    <h1>Code Formatter</h1>
+                    <span>Format code with specified spacing, indentation etc.</span>
+                    <hr>
+                </div>
+
+                <!-- Code Formatter Containers -->
+                <div class="code-formatter-header">
+                    <span>Code Editor</span>
+                    <span>Formatted Code</span>
+                </div>
+                <hr>
+                <div class="code-formatter-container">
+                    <div class="formatter-container">
+                        <textarea id="code-editor" rows="20" cols="100"></textarea>
+                    </div>
+                    <div class="formatter-container">
+                        <textarea id="code-formatted" rows="20" cols="100"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Code Formatter Controls -->
+                <div class="code-formatter-controls">
+                    <label for="format-selector">Select Format Language</label>   
+                    <select id="format-selector" onchange="changeModes()">
+                        <option value="javascript">JS</option>
+                        <option value="html">HTML</option> 
+                        <option value="css">CSS</option>
+                    </select>
+                    <input type="button" value="Format" onclick="formatCode()">
+                </div>
+
+                <!-- User Credit -->
+                <div class="credit-box">
+                    <hr class="credit-hr">
+                    <span class="credit-link">Feature added by <a href="https://github.com/THHamiltonSmith">@thhamiltonsmith</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <span>&copy; WebDevHub 2022. All rights reserved. <span>&middot;</span> Brought to you by <a href="https://www.skyenterprisesau.com">Sky Enterprises</a></span>
+        </footer>
+
+        <!-- Scripts -->
+        <!-- CodeMirror -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" integrity="sha512-n7rucz/qOiYAkYK1CVKuqygMAnohil8Rg6kKAv0IsF2xnHUhnVyD5K9GO25OUvc+WEVZVu+NIYLblIUpkBMNvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/scroll/simplescrollbars.min.js" integrity="sha512-1Vc3i/yplqkVbJBGgEpx9odVj3SLHMx2EOsQOMJsHbM5LRPL2iaPH2sEE+8sZOCqvuXGignKEwmTqO6/b11RqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/xml/xml.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/css/css.min.js"></script>
+
+        <!-- Formatter & JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.4/beautify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.4/beautify-css.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.4/beautify-html.min.js"></script>
+        <script src="code-formatter.js"></script>
+
+    </body>
+
+</html>
