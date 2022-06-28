@@ -22,15 +22,17 @@ window.addEventListener("load", () => {
         activeCodeType = result;
     }
 
+    const newMode = "text/" + activeCodeType;
+
     // Initialise text areas.
     codeEditor = CodeMirror.fromTextArea(codeEditorObj, {
-        mode: activeCodeType,
+        mode: newMode,
         theme: "lesser-dark",
         scrollbarStyle: "simple",
         lineNumbers: true,
     });
     codeFormatted = CodeMirror.fromTextArea(formattedCodeObj, {
-        mode: activeCodeType,
+        mode: newMode,
         theme: "lesser-dark",
         scrollbarStyle: "simple",
         lineNumbers: true,

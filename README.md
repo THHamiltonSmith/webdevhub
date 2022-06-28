@@ -36,6 +36,8 @@ These are only some of the features planned to be added. Check out the Projects 
 
 - <a href="https://github.com/Sky-Enterprises/luna-framework">Luna Framework (CSS)</a>
 - <a href="https://github.com/jquery/jquery">jQuery</a>
+- <a href="https://github.com/codemirror/codemirror5">CodeMirror</a>
+- <a href="https://github.com/beautify-web/js-beautify">js-beautify</a>
 
 &nbsp;
 
