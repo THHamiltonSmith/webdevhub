@@ -84,4 +84,7 @@ To contribute to the site:
 ## Screenshots
 
 <img width="1512" alt="Screenshot 2022-06-25 at 9 18 18 pm" src="https://user-images.githubusercontent.com/19927547/175772260-5622d523-dd80-4fdb-860d-8f7f3dc92880.png">
+<img width="1512" alt="Screenshot 2022-06-28 at 11 51 51 pm" src="https://user-images.githubusercontent.com/19927547/176326721-c6901aa3-871f-4d05-889f-a4e1e6599b31.png">
+<img width="1512" alt="Screenshot 2022-06-29 at 12 15 32 am" src="https://user-images.githubusercontent.com/19927547/176326733-e0303f13-9e34-460f-b999-ddf9d622d248.png">
+
 
