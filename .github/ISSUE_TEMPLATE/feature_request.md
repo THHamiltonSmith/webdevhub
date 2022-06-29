@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Answer all that apply**
+**Answer all that apply, delete what isn't relevent.**
 ---
 **Is your feature request something that the site should add? Please describe.**
 A clear and concise description of what your proposed feature is. Ex. An Image converter to convert [...]
