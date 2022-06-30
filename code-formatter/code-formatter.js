@@ -4,6 +4,7 @@
 const codeEditorObj = document.getElementById("code-editor");
 const formattedCodeObj = document.getElementById("code-formatted");
 const formatSlector = document.getElementById("format-selector");
+const popupText = document.getElementById("popup-text");
 
 // Get the code editors and the active code type.
 var codeEditor;
@@ -68,4 +69,16 @@ function changeModes() {
 
     // Set the active code type.
     activeCodeType = newMode;
+}
+
+// Copy text to clipboard
+function copyText() {
+    const text = codeFormatted.getDoc().getValue();
+    navigator.clipboard.writeText(text);
+
+    // Displays text `Copied!` for 2 seconds
+    popupText.style.display = "inline-block";
+    setTimeout(function() {
+        popupText.style.display = null
+    }, 2000)
 }
