@@ -547,7 +547,9 @@ body {
     height: 100%;
 }
 .formatter-popup {
-    display: none;
+    z-index: 100;
+    display: inline-block;
+    opacity: 0;
     background-color: #262626;
     color: white;
     width: 74px;

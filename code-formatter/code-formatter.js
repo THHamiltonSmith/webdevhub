@@ -77,8 +77,8 @@ function copyText() {
     navigator.clipboard.writeText(text);
 
     // Displays text `Copied!` for 2 seconds
-    popupText.style.display = "inline-block";
+    popupText.style.opacity = 1;
     setTimeout(function() {
-        popupText.style.display = null
+        popupText.style.opacity = 0
     }, 2000)
 }
