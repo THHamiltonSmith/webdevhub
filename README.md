@@ -26,7 +26,7 @@ A central hub with all the tools a developer might need makes it easier to focus
 - URL Shortner
 - File Compressors
 - Site/code templates.
-- Expansion to provide tools for other programming langauges (C, C++, Python etc.)
+- Expansion to provide tools for other programming languages (C, C++, Python etc.)
 
 
 These are only some of the features planned to be added. Check out the Projects page to see a more in-depth board of potential features to be added, or create a pull request and suggest your own feature.
