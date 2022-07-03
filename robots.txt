@@ -1,0 +1,5 @@
+# Group 1
+User-agent: *
+Disallow: 
+
+Sitemap: https://thhamiltonsmith.github.io/webdevhub/sitemap.xml
