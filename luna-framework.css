@@ -12,9 +12,10 @@ footer {
     position: absolute;
     bottom: 0;
     padding: 30px;
-    width: 100%;
+    width: calc(100% - 60px);
     background-color: #25303e;
     text-align: center;
+    font-size: 15px;
 }
 footer a {
     color: #aaa;
@@ -22,6 +23,10 @@ footer a {
 }
 footer a:hover {
     color: #ccc;
+}
+footer .md {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 button, input, textarea {
     border: none;
@@ -54,7 +59,7 @@ hr {
 }
 
 /* Navbar */
-nav {
+.navbar {
     position: absolute;
     display: flex;
     align-items: center;
@@ -64,12 +69,21 @@ nav {
     height: 52px;
     width: 100%;
 }
-nav ul {
+.nav-container {
+    display: flex;
+    width: 100%;
+}
+.nav-centered {
+    margin: auto;
+    max-width: 1400px;
+    height: 54px;
+}
+.navbar-ul {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-nav ul li {
+.navbar-ul li {
     display: inline-flex;
     list-style-type: none;
     font-size: 15px;
@@ -241,8 +255,8 @@ nav ul li {
 @media screen and (max-width: 1000px) {
 
     /* Navbar */
-    nav {
-        background-color: #111;
+    .navbar {
+        background-color: #14151a;
     }
     .navbar-toggler {
         display: block;
@@ -250,9 +264,6 @@ nav ul li {
     .nav-brand {
         margin-left: auto;
         margin-right: auto;
-    }
-    .nav-brand a {
-        margin-left: -25px;
     }
     .collapsible {
         position: absolute;

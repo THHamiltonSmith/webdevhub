@@ -54,10 +54,15 @@ body {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 800px;
+    width: 65%;
     line-height: 20px;
     font-size: 15px;
     color: #888;
+}
+@media screen and (max-width: 800px) {
+    .disclaimer {
+        width: 80%;
+    }
 }
 .disclaimer a {
     color: #999;
