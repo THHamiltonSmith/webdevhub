@@ -268,7 +268,8 @@ hr {
     .collapsible {
         position: absolute;
         top: 56px;
-        margin-left: -3rem;
+        margin-left: -6rem;
+        padding-right: 16px;
         max-height: 0;
         width: calc(100% - 2rem);
     }

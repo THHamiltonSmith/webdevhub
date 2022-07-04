@@ -7,8 +7,7 @@ const dashboardModal = document.getElementById("dashboard-modal");
 navbarToggler.addEventListener("click", function () {
 
     // If the collapsable div doesnt have inline maxHeight styling, show it. If it does, hide it.
-    const content = this.nextElementSibling.nextElementSibling;
-    console.log(content.style.maxHeight)
+    const content = this.nextElementSibling.children[1];
     if (content.style.maxHeight) {
         content.style.maxHeight = null;
         content.style.paddingTop = null;
@@ -18,6 +17,7 @@ navbarToggler.addEventListener("click", function () {
     }
 });
 
+/*
 // When the dashboard modal is clicked outside of the dashboard box, hide it.
 dashboardModal.addEventListener("click", function (e) {
     if (dashboardModal.style.display == "flex" && e.target == dashboardModal) {
@@ -35,3 +35,4 @@ function toggleModal() {
             dashboardModal.style.display = "flex"
     }
 }
+*/
