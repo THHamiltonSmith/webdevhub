@@ -256,6 +256,8 @@ hr {
 
     /* Navbar */
     .navbar {
+        padding-left: 20px;
+        width: calc(100% - 22px);
         background-color: #14151a;
     }
     .navbar-toggler {
