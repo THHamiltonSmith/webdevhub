@@ -8,34 +8,35 @@
 
 
 <url>
-  <loc>https://thhamiltonsmith.github.io/webdevhub</loc>
-  <lastmod>2022-07-01T07:50:07+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/</loc>
+  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://thhamiltonsmith.github.io/webdevhub/code-formatter</loc>
-  <lastmod>2022-07-01T07:50:07+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/code-formatter</loc>
+  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thhamiltonsmith.github.io/webdevhub/image-converter</loc>
-  <lastmod>2022-07-01T07:50:07+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/image-converter</loc>
+  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thhamiltonsmith.github.io/webdevhub/word-counter</loc>
-  <lastmod>2022-07-01T07:50:07+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/word-counter</loc>
+  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thhamiltonsmith.github.io/webdevhub/hex-to-filter</loc>
-  <lastmod>2022-07-01T07:50:07+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/hex-to-filter</loc>
+  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thhamiltonsmith.github.io/webdevhub/lorem-ipsum-generator</loc>
-  <lastmod>2022-07-01T07:50:07+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/lorem-ipsum-generator</loc>
+  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 
 </urlset>
