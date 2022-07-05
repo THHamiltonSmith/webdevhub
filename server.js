@@ -1,3 +1,8 @@
+// server.js
+if (process.env.NODE_ENV != "production") {
+    require("dotenv").config();
+}
+
 // Main dependencies
 const express = require("express");
 const app = express();
@@ -66,4 +71,5 @@ app.get("/word-counter", (req, res) => {
 });
 
 // Initialise the server on port 3000.
-server.listen(3000);
+const PORT = process.env.PORT || 3000
+server.listen(PORT);
