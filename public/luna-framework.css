@@ -30,7 +30,6 @@ footer .md {
 }
 button, input, textarea {
     border: none;
-    transition: 0.2s ease-in-out;
 }
 button, input[type=button], input[type=submit] {
     padding: 15px;
@@ -41,6 +40,7 @@ button, input[type=button], input[type=submit] {
 }
 button:hover, input[type=button]:hover, input[type=submit]:hover {
     background-color: #353535;
+    transition: 0.2s ease-in-out;
 }
 button, input[type=button] {
     cursor: pointer;
@@ -102,14 +102,16 @@ hr {
 .nav-brand a {
     margin-top: 1px;
     color: #008cff;
+}
+.nav-brand a:hover {
     transition: 0.2s;
 }
 .nav-link {
     color: #e7e7e7;
-    transition: 0.2s;
 }
 .nav-link:hover {
     color: #aaa;
+    transition: 0.2s;
 }
 .nav-icons {
     width: 25px;

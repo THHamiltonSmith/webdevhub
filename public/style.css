@@ -92,11 +92,11 @@ body {
     background-color: #303e51;
     color: #eee;
     text-decoration: none;
-    transition: 0.2s;
 }
 .feature-container a:hover {
     background-color: #3d526f;
     box-shadow: none;
+    transition: 0.2s;
 }
 .feature-container a span {
     font-weight: 600;
