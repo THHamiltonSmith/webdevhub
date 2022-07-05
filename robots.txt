@@ -2,4 +2,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://thhamiltonsmith.github.io/webdevhub/sitemap.xml
+Sitemap: https://webdevhub.herokuapp.com/sitemap.xml
