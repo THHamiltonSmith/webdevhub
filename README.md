@@ -7,7 +7,7 @@
 
 > WebDevHub is designed to be one central place for developers, that offers a variety of tools to help with any developing needs. This includes code formatters, file converters, image compressors etc.
 
-https://thhamiltonsmith.github.io/webdevhub/
+https://webdevhub.herokuapp.com/
 
 A central hub with all the tools a developer might need makes it easier to focus on developing, rather then searching for different sites to find a working tool. WebDevHub eliminates this hassle. The site is open-source, designed to be made by the users. If there a feature you want to add, a bug you want to fix etc, simply open a pull request.
 
@@ -27,6 +27,11 @@ A central hub with all the tools a developer might need makes it easier to focus
 - File Compressors
 - Site/code templates.
 - Expansion to provide tools for other programming languages (C, C++, Python etc.)
+- CSS grid generator
+- JWT encoder / decoder
+- Link to Regex101
+- Colour palette generator from a base colour
+- Text & JSON diff
 
 
 These are only some of the features planned to be added. Check out the Projects page to see a more in-depth board of potential features to be added, or create a pull request and suggest your own feature.
@@ -34,6 +39,7 @@ These are only some of the features planned to be added. Check out the Projects 
 ---
 ### Frameworks Used
 
+- <a href="https://github.com/nodejs/node">Node.js</a>
 - <a href="https://github.com/Sky-Enterprises/luna-framework">Luna Framework (CSS)</a>
 - <a href="https://github.com/jquery/jquery">jQuery</a>
 - <a href="https://github.com/codemirror/codemirror5">CodeMirror</a>
@@ -46,30 +52,31 @@ These are only some of the features planned to be added. Check out the Projects 
 To contribute to the site:
 
 1. Clone the repository via terminal or github desktop.
-2. Create a new folder with your feature name (e.g `image-converter`) and create a `feature-name.js` and `index.html` file.
-3. Code your feature
-4. Add a link to the feature on the home page under a relevant subcategory.
-5. Add the Google Analytics tracking script below to the `<head>` tag of your page to make it easier for us to track the sites performance.
+2. Run `npm i` to install all needed node packages.
+3. In a terminal window opened in the main project directory, run `npm run devStart` to active nodemon, which will restart the test server whenever a change is made. The server can be acessed at `localhost:3000`
+4. Create a new file in the `/views` directory titled `your-feature.ejs` and a new JS file in the `/public` directory titled `your-feature.js`
+5. Add a new `app.get` request in the `server.js` file, as such:
 
-```html
-<!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN1VD8C61E"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-LN1VD8C61E');
-  </script>
+```js
+app.get("/your-feature", (req, res) => {
+    // Render the page with given paramaters.
+    res.render("your-feature", {    // The name of the .ejs file you created
+        title: "Your Feature",      // The title of the webpage, usually the same as the feature name.
+    });
+});
 ```
 
-6. (Optional) - Credit yourself at the bottom of your feature using this sample code. Have a look <a href="https://thhamiltonsmith.github.io/webdevhub/image-converter/">here</a> for an example of how it is done.
+6. Code your feature.
+7. Add a link to the feature on the home page under a relevant subcategory.
+8. (Optional) - Credit yourself at the bottom of your feature using this sample code. Have a look <a href="https://thhamiltonsmith.github.io/webdevhub/image-converter/">here</a> for an example of how it is done.
 
 ```html
   <!-- User Credit -->
   <hr class="credit-hr">
   <span class="credit-link">Feature added by <a href="https://github.com/your-username">@your-username</a></span>
 ```
+
+8. Create a pull request for your new feature.
 
 ### Rules/Guidelines for contributing
 
