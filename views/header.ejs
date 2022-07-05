@@ -25,13 +25,15 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN1VD8C61E"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+            if (window.location.href.includes("localhost:3000") != true) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag("js", new Date());
 
-            gtag("config", "G-LN1VD8C61E");
+                gtag("config", "G-LN1VD8C61E");
+            }
         </script>
     </head>
 
