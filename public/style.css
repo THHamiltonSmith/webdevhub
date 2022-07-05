@@ -1,5 +1,6 @@
 /* Main HTML Styling */
 body {
+    overflow-x: hidden;
     position: relative;
 }
 .index-main {
@@ -33,6 +34,9 @@ body {
 }
 .credit-link a:hover {
     color: #ccc;
+}
+.active {
+    font-weight: 500;
 }
 
 /* Header */
@@ -348,9 +352,13 @@ body {
     height: 50px;
 }
 .filterDetail {
-    margin-top: 10px;
+    position: absolute;
+    white-space: nowrap;
     margin-left: 0px !important;
     font-family: "Consolas", "Menlo", "Ubuntu Mono", monospace;
+}
+.lossDetail {
+    margin-top: 40px;
 }
 .hex-to-filter {
     position: relative;
@@ -379,8 +387,20 @@ body {
     font-size: 18px;
     font-weight: 500;
 }
+@media screen and (max-width: 1250px) {
+    .hex-to-filter {
+        flex-direction: column-reverse;
+        font-size: 14px;
+    }
+    .hex-to-filter-disclaimer {
+        padding: 20px !important;
+        width: calc(100% - 40px);
+        margin-bottom: 30px;
+    }
+}
 .hex-to-filter-main-content {
-    flex-basis: 100%;
+    position: relative;
+    flex-basis: 50%;
 }
 .hex-to-filter-main-content code {
     background-color: #354966;
@@ -391,10 +411,9 @@ body {
     border-radius: 5px;
 }
 .hex-to-filter-disclaimer {
-    position: absolute;
-    right: 0;
-    width: 50%;
+    flex-basis: 50%;
     padding: 30px;
+    align-self: flex-start;
     border-radius: 15px;
     background-color: #303e51;
     color: #aaa;
@@ -417,6 +436,7 @@ body {
     padding-left: 30px;
     margin-bottom: 0px;
     background-color: #222831;
+    overflow-x: scroll;
 }
 .pre-title {
     color: rgb(207, 179, 121);

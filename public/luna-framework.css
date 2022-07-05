@@ -273,7 +273,7 @@ hr {
         margin-left: -6rem;
         padding-right: 16px;
         max-height: 0;
-        width: calc(100% - 2rem);
+        width: calc(100% - 0.2rem);
     }
     nav ul {
         display: block;

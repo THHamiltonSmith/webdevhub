@@ -1,66 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-
         <!-- Tab Settings -->
         <title>WebDevHub</title>
-        <link rel="shortcut icon" type="image/png" href="icons/256x256.jpg"/>
-        <link rel="apple-touch-icon" href="icons/256x256.png" />
-		<link rel="canonical" href="https://thhamiltonsmith.github.io/webdevhub">
-
-        <!-- Meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="A central place for developers that offers a variety of tools to help with any developing needs such as code formatting, colour converting and more.">
-		<meta name="keywords" content="webdevhub, web dev, webdev, web development, front end, web dev tools, developer tools, web development tools, code formatter, colour converter">
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="WebDevHub">
-        <meta name="twitter:description" content="A central place for developers that offers a variety of tools to help with any developing needs such as code formatting, colour converting and more.">
-        <meta name="twitter:image" content="https://user-images.githubusercontent.com/19927547/175772260-5622d523-dd80-4fdb-860d-8f7f3dc92880.png">
-
-        <!-- CSS & JS -->
-        <link rel="stylesheet" href="luna-framework.css" />
-        <link rel="stylesheet" href="style.css" />
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN1VD8C61E"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-LN1VD8C61E');
-        </script>
         
+        <!-- Include the header HTML which contains universal tags, references and other metadata. -->
+        <%- include("header.ejs") %>
     </head>
     
 	<body>
-        <nav class="navbar">
-            <input type="image" class="navbar-toggler nav-icons" id="navbar-toggler" src="icons/menu.png">
-            <div class="nav-container">
-                <li class="nav-brand">
-                    <img class="nav-icons" src="icons/256x256.jpg" alt="Sky Enterprises Logo">
-                    <a href="">WebDevHub</a>
-                </li>
-                <div class="collapsible">
-                    <ul class="navbar-ul">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/THHamiltonSmith/webdevhub">GitHub</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.skyenterprisesau.com">Sky Enterprises</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
         <div class="index-main">
             <div class="main-header">
                 <h1>WebDevHub</h1>
@@ -88,11 +36,11 @@
                     <span>JS Formatter</span>
                     <p>Format JavaScript code with proper indentation, spacing etc.</p>
                 </a>
-				<a href="image-converter/">
+				<a href="image-converter">
                     <span>Image Converter</span>
                     <p>Convert one image type to another - (e.g PNG to JPG).</p>
                 </a>
-				<a class="functional" href="word-counter/">
+				<a class="functional" href="word-counter">
                     <span>Word Counter</span>
                     <p>Calculate the word and character count of a body of text.</p>
                 </a>
@@ -100,7 +48,7 @@
                     <span>Colour Converter</span>
                     <p>Convert one colour type to another - (e.g Hex to RGB).</p>
                 </a>
-				<a class="functional" href="hex-to-filter/">
+				<a class="functional" href="hex-to-filter">
                     <span>Hex to CSS <code>filter:</code></span>
                     <p>Convert a HEX colour code to a CSS<code>filter:</code>property.</p>
                 </a>
@@ -112,7 +60,7 @@
                     <span>JSON to XML Converter</span>
                     <p>Convert JSON into the XML markup type.</p>
                 </a>
-				<a class="functional" href="lorem-ipsum-generator/">
+				<a class="functional" href="lorem-ipsum-generator">
                     <span>Lorem Ipsum Generator</span>
                     <p>Generate fake 'Lorem Ipsum' text for prototyping paragraphs.</p>
                 </a>
@@ -123,7 +71,7 @@
                 <span>Format code into a more readable format by fixing indentation, spacing etc.</span>
                 <hr>
                 <div class="feature-row-content feature-container">
-                    <a class="functional" href="code-formatter/">
+                    <a class="functional" href="code-formatter">
                         <span>Format Code</span>
                         <p>Select any type of code and format form there.</p>
                     </a>
@@ -149,7 +97,7 @@
                 <span>Convert JSON to XML, colour types, file types and more.</span>
                 <hr>
                 <div class="feature-row-content feature-container">
-                    <a href="image-converter/">
+                    <a href="image-converter">
                         <span>Image Converter</span>
                         <p>Convert one image type to another - (e.g PNG to JPG).</p>
                     </a>
@@ -157,7 +105,7 @@
                         <span>Colour Converter</span>
                         <p>Convert one colour type to another - (e.g Hex to RGB).</p>
                     </a>
-                    <a class="functional" href="hex-to-filter/index.html">
+                    <a class="functional" href="hex-to-filter">
                         <span>Hex to CSS <code>filter:</code></span>
                         <p>Convert a HEX colour code to a CSS<code>filter:</code>property.</p>
                     </a>
@@ -178,11 +126,11 @@
                 <span>Get the word count of a body of text, generate dummy 'Lorem Ipsum' text and more.</span>
                 <hr>
                 <div class="feature-row-content feature-container">
-                    <a class="functional" href="word-counter/index.html">
+                    <a class="functional" href="word-counter">
                         <span>Word Counter</span>
                         <p>Calculate the word and character count of a body of text.</p>
                     </a>
-                    <a class="functional" href="lorem-ipsum-generator/index.html">
+                    <a class="functional" href="lorem-ipsum-generator">
                         <span>Lorem Ipsum Generator</span>
                         <p>Generate fake 'Lorem Ipsum' text for prototyping paragraphs.</p>
                     </a>
@@ -204,12 +152,8 @@
             </div>
         </div>
     
-        <!-- Footer -->
-        <footer>
-            <span>&copy; WebDevHub 2022. All rights reserved. <span>&middot;</span> Brought to you by <a href="https://www.skyenterprisesau.com">Sky Enterprises</a></span>
-        </footer>
-
-        <script src="luna-main.js"></script>
+        <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
+        <%- include("footer.ejs") %>
     </body>
 
 </html>

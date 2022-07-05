@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <!-- Include the header HTML which contains universal tags, references and other metadata. -->
+        <%- include("header.ejs") %>
+    </head>
+    
+	<body>
+        <div class="index-main">
+            <div class="main-content-container">
+                <div class="feature-main-header main-header">
+                    <h1>Word Counter</h1>
+                    <span>Count the words, characters, sentances and paragraphs of a text.</span>
+                    <hr>
+                </div>
+                <div class="word-counter">
+                    <div class="word-counter-container">
+                        <div class="word-counter-header">
+                            <h2><span class="word-count">0 words</span> <span class=char-count>0 characters</span></h2>
+                        </div>
+                        <textarea id="counter-input" rows="20" placeholder="Start typing, or copy and paste some text here..." ></textarea>
+                        <div class="word-counter-footer">
+                            <span class="word-count">0 words</span> <span class=char-count>0 characters</span>
+                        </div>
+                    </div>
+                    <div class="word-counter-sidebar">
+                        <ul>
+                            <li class="word-counter-sidebar-header">Details</li>
+                            <li>Words<span id="word-count-small">0</span></li>
+                            <li>Characters<span id="char-count-small">0</span></li>
+                            <li>Sentences<span id="sentance-count">0</span></li>
+                            <li>Paragraphs<span id="paragraph-count">0</span></li>
+                            <!-- <li>Reading Level<span>N/A</span></li> -->
+                            <li>Reading Time<span id="reading-time">0 sec</span></li>
+                            <li>Speaking Time<span id="speaking-time">0 sec</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
+        <%- include("footer.ejs") %>
+
+        <!-- JS -->
+        <script src="/word-counter.js"></script>
+    </body>
+
+</html>

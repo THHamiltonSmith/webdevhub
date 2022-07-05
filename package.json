@@ -1,0 +1,36 @@
+{
+    "name": "webdevhub",
+    "version": "1.0.0",
+    "description": "A hub of tools and asset for web developers.",
+    "main": "server.js",
+    "scripts": {
+        "devStart": "nodemon server.js --ext js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/THHamiltonSmith/webdevhub.git"
+    },
+    "keywords": [
+        "webdev",
+        "web",
+        "development",
+        "web",
+        "dev",
+        "tools",
+        "development",
+        "tools",
+        "webdevhub"
+    ],
+    "author": "Sky Enterprises",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/THHamiltonSmith/webdevhub/issues"
+    },
+    "homepage": "https://github.com/THHamiltonSmith/webdevhub#readme",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.1",
+        "nodemon": "^2.0.15"
+    }
+}

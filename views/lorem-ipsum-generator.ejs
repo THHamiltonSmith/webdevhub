@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <!-- Include the header HTML which contains universal tags, references and other metadata. -->
+        <%- include("header.ejs") %>
+    </head>
+    
+	<body>
+        <div class="index-main">
+            <div class="lorem-ipsum main-content-container">
+                <div class="feature-main-header main-header">
+                    <h1>Lorem Ipsum Generator</h1>
+                    <span>Generate dummy text for your website.</span>
+                    <hr>
+                </div>
+                <div class="lorem-ipsum-controls">
+                  <span>Paragraphs:</span>
+                  <input type="number" id="paragraph-count" value="2">
+                  <input type="button" value="Generate Text" onclick="generateIpsum();">
+                </div>
+                <div id="paragraph-container">
+                    <!-- Paragraphs Go Here -->
+                    <p>No text generated. Press the 'Generate' button to generate some Lorem Ipsum text.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
+        <%- include("footer.ejs") %>
+
+        <!-- JS -->
+        <script src="/lorem-ipsum-generator.js"></script>
+    </body>
+
+</html>
