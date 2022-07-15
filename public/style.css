@@ -634,3 +634,17 @@ body {
 .CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler {
     background-color: #1f2630;
 }
+
+/* Error Message */
+#error-message-container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #0381e8;
+    border-radius: 5px;
+}
+#error-message-container span {
+    color: #e7e7e7;
+    font-size: 15px;
+}

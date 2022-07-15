@@ -18,9 +18,9 @@ A central hub with all the tools a developer might need makes it easier to focus
 - Word Counter
 - Lorem Ipsum Generator
 - Code Formatter (HTML, CSS, JS, etc.)
+- JSON to XML converter.
 
 ### Planned Features
-- XML - JSON - ymal converter
 - Image Converter *- UI implemented but needs server-side code to fix*
 - Color Converter (Hex to RGB etc.)
 - URL Shortner
@@ -32,6 +32,9 @@ A central hub with all the tools a developer might need makes it easier to focus
 - Link to Regex101
 - Colour palette generator from a base colour
 - Text & JSON diff
+- JS repl
+- ESLint & Prettier config generators
+- .MD formatter/preview
 
 
 These are only some of the features planned to be added. Check out the Projects page to see a more in-depth board of potential features to be added, or create a pull request and suggest your own feature.
