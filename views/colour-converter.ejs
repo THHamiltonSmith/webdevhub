@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="canonical" href="https://webdevhub.herokuapp.com/colour-converter" />
+
+        <!-- Include the header HTML which contains universal tags, references and other metadata. -->
+        <%- include("header.ejs") %>
+    </head>
+
+    <body>
+        <div class="index-main">
+            <div class="main-content-container">
+                <div class="feature-main-header main-header">
+                    <h1>Colour Converter</h1>
+                    <span>Convert different colour types such as HEX and RGB into other formats.</span>
+                    <hr />
+                </div>
+
+                <div class="colour-converter">
+                    <div class="colour-inputs">
+                        <li>
+                            <label>Hex</label>
+                            <input type="text" id="hex" value="#FFFFFF" placeholder="#FFFFFF" maxlength="7" style="text-transform: uppercase;">
+                            <button onclick="copyText(this)">
+                                <img src="/icons/copy.png" alt="Copy Hex">
+                                <span class="formatter-popup" id="popup-text">Copied!</span>
+                            </button>
+                        </li>
+                        <li>
+                            <label>RGB</label>
+                            <input type="text" id="rgb" value="rgb(255,255,255)" placeholder="rgb(255,255,255)" maxlength="18">
+                            <button onclick="copyText(this)">
+                                <img src="/icons/copy.png" alt="Copy RGB">
+                                <span class="formatter-popup" id="popup-text">Copied!</span>
+                            </button>
+                        </li>
+                        <li>
+                            <label>HSL</label>
+                            <input type="text" id="hsl" value="hsl(0,0%,100%)" placeholder="hsl(0,0%,100%)">
+                            <button onclick="copyText(this)">
+                                <img src="/icons/copy.png" alt="Copy HSL">
+                                <span class="formatter-popup" id="popup-text">Copied!</span>
+                            </button>
+                        </li>
+                        <li>
+                            <label>HWB</label>
+                            <input type="text" id="hwb" value="hwb(0 100% 0%)" placeholder="hwb(0 100% 0%)">
+                            <button onclick="copyText(this)">
+                                <img src="/icons/copy.png" alt="Copy HWB">
+                                <span class="formatter-popup" id="popup-text">Copied!</span>
+                            </button>
+                        </li>
+                    </div>
+                    <div class="colour-block-container">
+                        <h4>Result:</h4>
+                        <div class="colour-block">
+                        </div>
+                    </div>
+                    <div class="flex-break">
+                    </div>
+                    <div class="hex-to-filter-disclaimer">
+                        <p>Also check out the Hex to CSS <code>filter:</code> converter 
+                            <a href="../hex-to-filter" title="Hex to Filter">here.</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
+        <%- include("footer.ejs") %>
+
+        <!-- JS -->
+        <script src="/colour-converter.js"></script>
+    </body>
+</html>

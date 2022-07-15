@@ -67,6 +67,10 @@ body {
     .disclaimer {
         width: 80%;
     }
+    .flex-break {
+        margin-top: -20px;
+        display: block !important;
+      }
 }
 .disclaimer a {
     color: #999;
@@ -106,7 +110,7 @@ body {
     margin-bottom: 0px;
     line-height: 21px;
 }
-.feature-container a code {
+.feature-container a code, .colour-converter .hex-to-filter-disclaimer code {
     padding: 3px;
     padding-left: 6px;
     padding-right: 6px;
@@ -647,4 +651,97 @@ body {
 #error-message-container span {
     color: #e7e7e7;
     font-size: 15px;
+}
+
+/* Colour Converter */
+.colour-converter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+.flex-break {
+    display: none;
+    flex-basis: 100%;
+    height: 0;
+  }
+.colour-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.colour-inputs li {
+    position: relative;
+    list-style-type: none;
+}
+.colour-inputs li label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+    font-weight: 600;
+}
+.colour-inputs li input {
+    background-color: #2a303d;
+    color: #e7e7e7;
+    width: 240px;
+    height: 30px;
+    font-size: 16px;
+}
+.colour-inputs li button {
+    position: absolute;
+    right: 0;
+    height: 46px;
+    background-color: transparent;
+    padding: 6px;
+}
+.colour-inputs li button img {
+    margin-top: 2px;
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+    transition: 0.1s;
+}
+.colour-inputs li button img:hover {
+    filter: invert(39%) sepia(37%) saturate(0%) hue-rotate(152deg) brightness(93%) contrast(86%);
+}
+.colour-inputs li button span {
+    position: absolute;
+    top: 13px;
+    left: -70px;
+    background-color: transparent;
+    color: #aaa;
+}
+.colour-block-container h4 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.colour-block {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+}
+.colour-converter .hex-to-filter-disclaimer {
+    flex: 1;
+}
+.colour-converter .hex-to-filter-disclaimer p {
+    display: inline;
+}
+.colour-converter .hex-to-filter-disclaimer code {
+    background-color: #2a303d;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.colour-converter .hex-to-filter-disclaimer a {
+    color: #ccc;
+    transition: 0.2s;
+    border-bottom: 1px solid #ccc;
+}
+.colour-converter .hex-to-filter-disclaimer a:hover {
+    color: #e7e7e7;
+}
+@media screen and (max-width: 400px) {
+    .colour-converter {
+        flex-direction: column;
+    }
 }
