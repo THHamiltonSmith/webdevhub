@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="canonical"
+      href="https://webdevhub.herokuapp.com/hex-to-filter"
+    />
+
+    <!-- Include the header HTML which contains universal tags, references and other metadata. -->
+    <%- include("header.ejs") %>
+  </head>
+
+  <body>
+    <div class="index-main">
+      <div class="main-content-container">
+        <div class="feature-main-header main-header">
+          <h1>Epoch to Date Converter</h1>
+          <span>Convert Epoch Time to Readable Data Time.</span>
+          <hr />
+        </div>
+
+        <div class="epoch-converter">
+          <div class="form__group">
+            <label class="form__label">Epoch Time</label>
+            <input
+              type="number"
+              name="epoch-time"
+              class="epoch-time"
+              placeholder="1234567890"
+            />
+            <button type="submit" class="execute" onclick="convertTime()">
+              Submit
+            </button>
+          </div>
+          <div class="form__group">
+            <span
+              class="converted-time"
+              id="converted-time"
+              style="color: white"
+              >Text</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
+    <%- include("footer.ejs") %>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/epoch-time-converter.js"></script>
+  </body>
+</html>
