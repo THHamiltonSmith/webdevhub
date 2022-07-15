@@ -71,7 +71,7 @@ app.get("/your-feature", (req, res) => {
 
 6. Code your feature.
 7. Add a link to the feature on the home page under a relevant subcategory.
-8. (Optional) - Credit yourself at the bottom of your feature using this sample code. Have a look <a href="https://thhamiltonsmith.github.io/webdevhub/image-converter/">here</a> for an example of how it is done.
+8. (Optional) - Credit yourself at the bottom of your feature using this sample code. Have a look <a href="https://webdevhub.herokuapp.com/image-converter/">here</a> for an example of how it is done.
 
 ```html
   <!-- User Credit -->
