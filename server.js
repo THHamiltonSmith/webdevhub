@@ -8,6 +8,7 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 const convert = require("xml-js");
+const colourConvert = require('color-convert');
 
 // Handle 'sitemap.xml' and 'robots.txt' functionality so crawl bots can access them.
 app.get("/robots.txt", function (req, res) {
@@ -72,6 +73,45 @@ app.get("/word-counter", (req, res) => {
     res.render("word-counter", {
         title: "Word Counter",
     });
+});
+app.get("/colour-converter", (req, res) => {
+    // Render the page with given paramaters.
+    res.render("colour-converter", {
+        title: "Colour Converter",
+    });
+});
+app.get("/color-converter", (req, res) => {
+    // Render the page with given paramaters.
+    res.redirect("/colour-converter");
+});
+app.post("/convert-colour", (req, res) => {
+
+    var colour = "";
+    const inputValue = req.body.focusedInputValue.replace(/[^\d,-]/g, "");
+
+    if (req.body.focusedInputType == "hex") {
+        colour = req.body.focusedInputValue.substring(1);
+    }
+    else if (req.body.focusedInputType == "rgb") {
+        const splitArray = inputValue.split(",");
+        console.log(splitArray)
+        colour = colourConvert.rgb.hex(parseInt(splitArray[0]), parseInt(splitArray[1]), parseInt(splitArray[2]));
+    } else if (req.body.focusedInputType == "hsl") {
+        const splitArray = inputValue.split(",");
+        colour = colourConvert.hsl.hex(parseInt(splitArray[0]), parseInt(splitArray[1]), parseInt(splitArray[2])); 
+    } else if (req.body.focusedInputType == "hwb") {
+        const splitArray = inputValue.split(",");
+        colour = colourConvert.hwb.hex(parseInt(splitArray[0]), parseInt(splitArray[1]), parseInt(splitArray[2])); 
+    }
+
+    const colourObj = {}
+    colourObj.hex = colour;
+    colourObj.rgb = colourConvert.hex.rgb(colour);
+    colourObj.hsl = colourConvert.hex.hsl(colour);
+    colourObj.hwb = colourConvert.hex.hwb(colour);
+
+    // Send the converted code back to the client.
+    res.status(200).json({ colourObj: colourObj });
 });
 app.get("/json-xml-converter", (req, res) => {
     // Render the page with given paramaters.
