@@ -37,7 +37,7 @@ A central hub with all the tools a developer might need makes it easier to focus
 - .MD formatter/preview
 
 
-These are only some of the features planned to be added. Check out the Projects page to see a more in-depth board of potential features to be added, or create a pull request and suggest your own feature.
+If you like, you can fork the repo and create a pull request to contribute one of these features to the site. These are only some of the features planned to be added, and more will be listed here in the future. Check out the Projects page to see a more in-depth board of potential features to be added, or create a pull request and suggest your own feature.
 
 ---
 ### Frameworks Used
