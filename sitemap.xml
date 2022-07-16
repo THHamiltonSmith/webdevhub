@@ -33,10 +33,14 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://webdevhub.herokuapp.com/lorem-ipsum-generator</loc>
-  <lastmod>2022-07-05T07:25:11+00:00</lastmod>
+  <loc>https://webdevhub.herokuapp.com/json-xml-converter</loc>
+  <lastmod>2022-07-16T07:25:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://webdevhub.herokuapp.com/colour-converter</loc>
+  <lastmod>2022-07-16T07:25:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>

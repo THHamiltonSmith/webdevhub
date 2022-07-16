@@ -521,11 +521,16 @@ body {
     margin: auto;
     margin-top: 20px;
     margin-bottom: -20px;
-    padding: 5px;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 20px;
     width: 80%;
     background-color: #243142;
     box-shadow: 0 8px 6px -2px #14181e;
+}
+.disclaimer-box p {
+    line-height: 20px;
 }
 
 /* Code Formatter */
@@ -767,6 +772,9 @@ body {
     .lossDetail {
         margin-top: 20px;
     }
+    .image-converter-preview-container {
+        width: 70%;
+    }
 }
 @media (max-width: 800px) {
     .disclaimer {
@@ -801,6 +809,10 @@ body {
     .formatter-container div {
         max-width: 100% !important;
     }
+
+    .image-converter-preview-container {
+        width: 80%;
+    }
 }
 @media (max-width: 400px) {
     .colour-converter {
@@ -808,5 +820,8 @@ body {
     }
     .index-main {
         padding: 20px;
+    }
+    .image-converter-preview-container {
+        width: 95%;
     }
 }
