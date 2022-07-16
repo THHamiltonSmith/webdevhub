@@ -67,7 +67,7 @@ hr {
     padding-left: 3rem;
     background-color: #14151a;
     height: 52px;
-    width: 100%;
+    width: calc(100% - 3.2rem);
 }
 .nav-container {
     display: flex;
@@ -264,6 +264,7 @@ hr {
     }
     .navbar-toggler {
         display: block;
+        position: absolute;
     }
     .nav-brand {
         margin-left: auto;
@@ -271,11 +272,11 @@ hr {
     }
     .collapsible {
         position: absolute;
+        overflow: hidden;
         top: 56px;
-        margin-left: -6rem;
-        padding-right: 16px;
+        margin-left: -2.9rem;
         max-height: 0;
-        width: calc(100% - 0.2rem);
+        width: calc(100% - 3.4rem);
     }
     nav ul {
         display: block;

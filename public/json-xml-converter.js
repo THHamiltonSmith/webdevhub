@@ -65,14 +65,14 @@ function changeModes() {
         codeEditor.setOption("mode", "text/xml");
         codeFormatted.setOption("mode", "text/javascript");
 
-        document.querySelector(".code-formatter-header").children[0].innerHTML = "XML";
-        document.querySelector(".code-formatter-header").children[1].innerHTML = "JSON";
+        document.getElementById("header-1").children[0].innerHTML = "XML";
+        document.getElementById("header-2").children[1].innerHTML = "JSON";
     } else if (newMode == "xml") {
         codeEditor.setOption("mode", "text/javascript");
         codeFormatted.setOption("mode", "text/xml");
 
-        document.querySelector(".code-formatter-header").children[0].innerHTML = "JSON";
-        document.querySelector(".code-formatter-header").children[1].innerHTML = "XML";
+        document.getElementById("header-1").children[0].innerHTML = "JSON";
+        document.getElementById("header-2").children[1].innerHTML = "XML";
     }
 
     // Set the active code type.

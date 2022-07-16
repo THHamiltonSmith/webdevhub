@@ -6,7 +6,7 @@ body {
 .index-main {
     padding: 40px;
     padding-top: 55px;
-    padding-bottom: 120px;
+    padding-bottom: 120px !important;
     min-height: calc(100vh - 80px);
     max-width: 1300px;
     margin: auto;
@@ -62,15 +62,6 @@ body {
     line-height: 20px;
     font-size: 15px;
     color: #888;
-}
-@media screen and (max-width: 800px) {
-    .disclaimer {
-        width: 80%;
-    }
-    .flex-break {
-        margin-top: -20px;
-        display: block !important;
-      }
 }
 .disclaimer a {
     color: #999;
@@ -391,17 +382,6 @@ body {
     font-size: 18px;
     font-weight: 500;
 }
-@media screen and (max-width: 1250px) {
-    .hex-to-filter {
-        flex-direction: column-reverse;
-        font-size: 14px;
-    }
-    .hex-to-filter-disclaimer {
-        padding: 20px !important;
-        width: calc(100% - 40px);
-        margin-bottom: 30px;
-    }
-}
 .hex-to-filter-main-content {
     position: relative;
     flex-basis: 50%;
@@ -413,6 +393,9 @@ body {
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 5px;
+}
+.hex-to-filter-main-content p {
+    line-height: 28px;
 }
 .hex-to-filter-disclaimer {
     flex-basis: 50%;
@@ -558,18 +541,21 @@ body {
 .formatter-container {
     flex: 1; /* formerly flex: 1 0 auto; */
 }
+.formatter-container span {
+    font-weight: 600;
+}
 .formatter-container div {
     max-width: 590px !important;
 }
 .formatter-container button {
+    position: relative;
     background-color:#242426;
     border-radius: 5px;
     padding: 5px;
     width: 30px;
     height: 33px;
-    position: relative;
-    left: 101%;
-    bottom: 90%; /* 86% <==> 90% */
+    left: 95%;
+    bottom: 94%; /* 86% <==> 90% */
 }
 .formatter-container img {
     width: 100%;
@@ -577,22 +563,24 @@ body {
 }
 .formatter-popup {
     z-index: 100;
+    position: relative;
     display: inline-block;
-    opacity: 0;
+    pointer-events: none;
+    text-align: center;
     background-color: #262626;
     color: white;
+    padding-top: 2px;
+    opacity: 0;
+    bottom: 96%;
+    left: 75%;
     width: 74px;
     height: 23px;
-    text-align: center;
-    padding-top: 2px;
     border-radius: 6px;
-    position: relative;
-    bottom: 106%;
-    left: 91%;
 }
 .code-formatter-controls {
-    margin-top: 15px;
     text-align: center;
+    margin-top: 15px;
+    line-height: 40px;
 }
 .code-formatter-controls input[type=button] {
     margin-left: 40px;
@@ -673,6 +661,7 @@ body {
 .colour-inputs li {
     position: relative;
     list-style-type: none;
+    max-width: 314.5px;
 }
 .colour-inputs li label {
     display: inline-block;
@@ -740,8 +729,84 @@ body {
 .colour-converter .hex-to-filter-disclaimer a:hover {
     color: #e7e7e7;
 }
-@media screen and (max-width: 400px) {
+
+/* Media Querys */
+@media (max-width: 1400px) {
+    .formatter-container {
+        position: relative;
+    }
+    .formatter-container button {
+        position: absolute;
+        bottom: 94%;
+        left: auto;
+        right: 0;
+    }
+    .formatter-popup {
+        position: absolute;
+        left: auto;
+        right: 40px;
+        bottom: 95%;
+    }
+}
+@media (max-width: 1250px) {
+    .hex-to-filter {
+        flex-direction: column-reverse;
+        font-size: 14px;
+    }
+    .hex-to-filter-disclaimer {
+        padding: 20px !important;
+        width: calc(100% - 40px);
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 1000px) {
+    .filterDetail {
+        position: static;
+        white-space: inherit;
+    }
+    .lossDetail {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .disclaimer {
+        width: 80%;
+    }
+    .flex-break {
+        margin-top: -20px;
+        display: block !important;
+    }
+    .index-main {
+        padding: 30px;
+    }
+    .main-content-container {
+        padding: 10px;
+        padding-top: 30px;
+    }
+    .word-counter {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .word-counter-container {
+        padding-right: 26px;
+    }
+    .word-counter-sidebar {
+        width: 100%;
+    }
+
+    /* Code Formatters */
+    .code-formatter-container {
+        flex-direction: column;
+    }
+    .formatter-container div {
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 400px) {
     .colour-converter {
         flex-direction: column;
+    }
+    .index-main {
+        padding: 20px;
     }
 }
