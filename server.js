@@ -46,37 +46,37 @@ app.get("/", (req, res) => {
 });
 app.get("/code-formatter", (req, res) => {
     // Render the page with given paramaters.
-    res.render("code-formatter", {
+    res.render("formatters/code-formatter", {
         title: "Code Formatter",
     });
 });
 app.get("/hex-to-filter", (req, res) => {
     // Render the page with given paramaters.
-    res.render("hex-to-filter", {
+    res.render("converters/hex-to-filter", {
         title: "Hex to Filter",
     });
 });
 app.get("/image-converter", (req, res) => {
     // Render the page with given paramaters.
-    res.render("image-converter", {
+    res.render("converters/image-converter", {
         title: "Image Converter",
     });
 });
 app.get("/lorem-ipsum-generator", (req, res) => {
     // Render the page with given paramaters.
-    res.render("lorem-ipsum-generator", {
+    res.render("text/lorem-ipsum-generator", {
         title: "Lorem Ipsum Generator",
     });
 });
 app.get("/word-counter", (req, res) => {
     // Render the page with given paramaters.
-    res.render("word-counter", {
+    res.render("text/word-counter", {
         title: "Word Counter",
     });
 });
 app.get("/colour-converter", (req, res) => {
     // Render the page with given paramaters.
-    res.render("colour-converter", {
+    res.render("converters/colour-converter", {
         title: "Colour Converter",
     });
 });
@@ -84,11 +84,21 @@ app.get("/color-converter", (req, res) => {
     // Render the page with given paramaters.
     res.redirect("/colour-converter");
 });
+app.get("/json-xml-converter", (req, res) => {
+    // Render the page with given paramaters.
+    res.render("converters/json-xml-converter", {
+        title: "Json to XML Converter",
+    });
+});
+
+/* POST Requests */
 app.post("/convert-colour", (req, res) => {
 
+    // Get the colour and the input value, minus any non numbers.
     var colour = "";
     const inputValue = req.body.focusedInputValue.replace(/[^\d,-]/g, "");
 
+    // Depending on the colour type, convert it to hex to use later.
     if (req.body.focusedInputType == "hex") {
         colour = req.body.focusedInputValue.substring(1);
     }
@@ -104,25 +114,22 @@ app.post("/convert-colour", (req, res) => {
         colour = colourConvert.hwb.hex(parseInt(splitArray[0]), parseInt(splitArray[1]), parseInt(splitArray[2])); 
     }
 
+    // Put all of the converted colours in an object.
     const colourObj = {}
     colourObj.hex = colour;
     colourObj.rgb = colourConvert.hex.rgb(colour);
     colourObj.hsl = colourConvert.hex.hsl(colour);
     colourObj.hwb = colourConvert.hex.hwb(colour);
 
-    // Send the converted code back to the client.
+    // Send the converted colours back to the client.
     res.status(200).json({ colourObj: colourObj });
 });
-app.get("/json-xml-converter", (req, res) => {
-    // Render the page with given paramaters.
-    res.render("json-xml-converter", {
-        title: "Json to XML Converter",
-    });
-});
 app.post("/convert-json-data", (req, res) => {
-    var result = "";
+
+    // Get the conversion type and code, while initialisng the result
     const conversionType = req.body.conversionType;
     const toConvertCode = req.body.toConvertCode;
+    var result = "";
 
     // Remove the "_text" key that the 'xml2json' function creates
     var removeJsonTextAttribute = function (value, parentElement) {

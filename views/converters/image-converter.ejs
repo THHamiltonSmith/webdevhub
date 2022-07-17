@@ -4,7 +4,7 @@
         <link rel="canonical" href="https://webdevhub.herokuapp.com/image-converter" />
 
         <!-- Include the header HTML which contains universal tags, references and other metadata. -->
-        <%- include("header.ejs") %>
+        <%- include("../header.ejs") %>
     </head>
     
 	<body>
@@ -15,11 +15,9 @@
                 <div class="feature-main-header main-header">
                     <h1>Image Converter</h1>
                     <span>Convert an image to jpg, png and other formats.</span>
-                    <div class="disclaimer-box">
-                        <p><strong>Disclaimer: </strong>This feature is currently unavailable due to the lack of 
-                            server-side integration on the site. Server-side code will be implemented in the future 
-                            as the site scales.</p>
-                    </div>
+                    <p class="disclaimer-box"><strong>Disclaimer: </strong>This feature is currently unavailable due to the lack of 
+                        server-side integration on the site. Server-side code will be implemented in the future 
+                        as the site scales.</p>
                     <hr>
                     <br>
                     <span>Upload an image...</span>
@@ -80,10 +78,10 @@
         </div>
     
         <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
-        <%- include("footer.ejs") %>
+        <%- include("../footer.ejs") %>
 
         <!-- JS -->
-        <script src="/image-converter.js"></script>
+        <script src="/converters/image-converter.js"></script>
     </body>
 
 </html>

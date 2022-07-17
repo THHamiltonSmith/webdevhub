@@ -57,13 +57,13 @@ To contribute to the site:
 1. Clone the repository via terminal or github desktop.
 2. Run `npm i` to install all needed node packages.
 3. In a terminal window opened in the main project directory, run `npm run devStart` to active nodemon, which will restart the test server whenever a change is made. The server can be acessed at `localhost:3000`
-4. Create a new file in the `/views` directory titled `your-feature.ejs` and a new JS file in the `/public` directory titled `your-feature.js`
+4. Create a new file in the `/views` directory titled `your-feature.ejs` and a new JS file in the `/public` directory titled `your-feature.js` in a relevent subfolder.
 5. Add a new `app.get` request in the `server.js` file, as such:
 
 ```js
 app.get("/your-feature", (req, res) => {
     // Render the page with given paramaters.
-    res.render("your-feature", {    // The name of the .ejs file you created
+    res.render("your-path/your-feature", {    // The name of the .ejs file you created including the path
         title: "Your Feature",      // The title of the webpage, usually the same as the feature name.
     });
 });

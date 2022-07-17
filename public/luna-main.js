@@ -1,38 +1,42 @@
-// main.js
+// luna-main.js
 
 const navbarToggler = document.getElementById("navbar-toggler");
-const dashboardModal = document.getElementById("dashboard-modal");
+const profileDropdownObj = document.getElementById("profile-dropdown");
+
+const dropdowns = document.getElementsByClassName("dropdown-toggle");
+
+for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].addEventListener("click", (e) => {
+        const linkedDropdown = document.getElementById(e.target.getAttribute("nav-target"));
+
+        if (linkedDropdown.classList.contains("show")) {
+            linkedDropdown.classList.remove("show");
+        } else {
+            linkedDropdown.classList.add("show")
+        }
+    })
+}
 
 // When the navbarToggler is clicked, show and hide the navbar content.
 navbarToggler.addEventListener("click", function () {
+    //
+    const content = this.nextElementSibling.children[1];
+    const dropdownMenus = document.getElementsByClassName("dropdown-menu") 
 
     // If the collapsable div doesnt have inline maxHeight styling, show it. If it does, hide it.
-    const content = this.nextElementSibling.children[1];
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        content.style.paddingTop = null;
+    if (content.classList.contains("expanded")) {
+        content.classList.remove("expanded");
+
+        // Hide any dropdowns
+        for (var i = 0; i < dropdownMenus.length; i++) {
+            dropdownMenus[i].style.opacity = 0;
+        }
     } else {
-        content.style.paddingTop = "10px";
-        content.style.maxHeight = "1000px";
+        content.classList.add("expanded");
+
+        // Show any dropdowns
+        for (var i = 0; i < dropdownMenus.length; i++) {
+            dropdownMenus[i].style.opacity = 1;
+        }
     }
 });
-
-/*
-// When the dashboard modal is clicked outside of the dashboard box, hide it.
-dashboardModal.addEventListener("click", function (e) {
-    if (dashboardModal.style.display == "flex" && e.target == dashboardModal) {
-        toggleModal()
-    }
-})
-
-// Show or hide the main modal when clicked.
-function toggleModal() {
-    switch (dashboardModal.style.display) {
-        case dashboardModal.style.display = "flex":
-            dashboardModal.style.display = "none"
-            break;
-        case dashboardModal.style.display = "none":
-            dashboardModal.style.display = "flex"
-    }
-}
-*/
