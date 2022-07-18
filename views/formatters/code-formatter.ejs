@@ -4,7 +4,7 @@
         <link rel="canonical" href="https://webdevhub.herokuapp.com/code-formatter" />
 
         <!-- Include the header HTML which contains universal tags, references and other metadata. -->
-        <%- include("header.ejs") %>
+        <%- include("../header.ejs") %>
 
         <!-- CSS & JS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -62,7 +62,7 @@
         </div>
     
         <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
-        <%- include("footer.ejs") %>
+        <%- include("../footer.ejs") %>
 
         <!-- CodeMirror -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" integrity="sha512-n7rucz/qOiYAkYK1CVKuqygMAnohil8Rg6kKAv0IsF2xnHUhnVyD5K9GO25OUvc+WEVZVu+NIYLblIUpkBMNvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -75,7 +75,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.4/beautify.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.4/beautify-css.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.4/beautify-html.min.js"></script>
-        <script src="/code-formatter.js"></script>
+        <script src="/formatters/code-formatter.js"></script>
     </body>
 
 </html>
