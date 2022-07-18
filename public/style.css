@@ -402,7 +402,7 @@ footer {
     display: flex;
     margin-top: 25px;
 }
-.hex-to-filter button, input {
+.hex-to-filter button, .hex-to-filter input {
     padding: 8px;
     padding-left: 10px;
     padding-right: 10px;
@@ -418,6 +418,7 @@ footer {
     margin-right: 5px;
     width: 100px;
     background-color: #ccc;
+    color: black;
 }
 .hex-to-filter label {
     margin-right: 10px;
