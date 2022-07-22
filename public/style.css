@@ -722,6 +722,8 @@ footer {
 .colour-inputs li input {
     background-color: #2a303d;
     color: #e7e7e7;
+    padding: 3px;
+    padding-left: 9px;
     width: 240px;
     height: 30px;
     font-size: 16px;
