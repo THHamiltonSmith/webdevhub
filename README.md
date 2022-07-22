@@ -87,7 +87,7 @@ app.get("/your-feature", (req, res) => {
 - Comment your code as you go and use readable variable names. Its hard to debug code when it looks like Latin.
 - Dont delete or change other people's code without a good explanation, or your pull-request wont be approved.
 
-> We want to make our documentation (including this README) the best it can be. If you have any suggestions, please open an issue.
+> We want to make our documentation (including this README) the best it can be. If you have any suggestions, please open an issue or join our <a href="https://discord.gg/87ygc8B2">Discord</a> for discussion.
 
 &nbsp;
 
