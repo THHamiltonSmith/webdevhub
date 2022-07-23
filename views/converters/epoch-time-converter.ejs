@@ -20,13 +20,12 @@
         </div>
 
         <!-- Code Formatter Containers -->
-        <div class="epoch-converter-header">
-          <span>Epoch Time</span>
-          <span>Standard Date Time</span>
+        <div class="code-formatter-header">
         </div>
-        <hr />
         <div class="code-formatter-container">
           <div class="converter-container">
+            <span>Epoch Time</span>
+            <hr />
             <textarea
               id="epoch-time"
               rows="1"
@@ -35,11 +34,13 @@
             ></textarea>
           </div>
           <div class="converter-container">
+            <span>Standard Date Time</span>
+            <hr />
             <textarea id="converted-time" rows="1" cols="10"></textarea>
-            <button id="copy" onclick="copyText()">
+            <button class="epoch-copy" id="copy" onclick="copyText()">
               <img src="/icons/copy.png" alt="copy" />
             </button>
-            <span class="formatter-popup" id="popup-text">Copied!</span>
+            <span class="formatter-popup epoch-copy-text" id="popup-text">Copied!</span>
           </div>
         </div>
 
