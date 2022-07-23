@@ -871,3 +871,50 @@ footer {
         width: 95%;
     }
 }
+
+.epoch-converter-header {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  gap: 20px;
+}
+
+.epoch-converter-header span {
+  flex-basis: 50%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.epoch-converter-controls {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.epoch-converter-controls input[type="button"] {
+  background-color: #008cff;
+  color: #e7e7e7;
+  transition: 0.2s;
+}
+
+.converter-container {
+  flex: 1;
+}
+
+.converter-container div {
+  max-width: 590px !important;
+}
+
+.converter-container textarea {
+  color: white;
+  font-size: large;
+}
+
+.converter-container button {
+  background-color: #242426;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30px;
+  height: 33px;
+  position: relative;
+  left: 101%;
+}

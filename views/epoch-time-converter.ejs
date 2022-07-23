@@ -19,27 +19,42 @@
           <hr />
         </div>
 
-        <div class="epoch-converter">
-          <div class="form__group">
-            <label class="form__label">Epoch Time</label>
-            <input
-              type="number"
-              name="epoch-time"
-              class="epoch-time"
+        <!-- Code Formatter Containers -->
+        <div class="epoch-converter-header">
+          <span>Epoch Time</span>
+          <span>Standard Date Time</span>
+        </div>
+        <hr />
+        <div class="code-formatter-container">
+          <div class="converter-container">
+            <textarea
+              id="epoch-time"
+              rows="1"
+              cols="10"
               placeholder="1234567890"
-            />
-            <button type="submit" class="execute" onclick="convertTime()">
-              Submit
+            ></textarea>
+          </div>
+          <div class="converter-container">
+            <textarea id="converted-time" rows="1" cols="10"></textarea>
+            <button id="copy" onclick="copyText()">
+              <img src="/icons/copy.png" alt="copy" />
             </button>
+            <span class="formatter-popup" id="popup-text">Copied!</span>
           </div>
-          <div class="form__group">
-            <span
-              class="converted-time"
-              id="converted-time"
-              style="color: white"
-              >Text</span
-            >
-          </div>
+        </div>
+
+        <!-- Code Formatter Controls -->
+        <div class="epoch-converter-controls">
+          <input type="button" value="Convert" onclick="convertTime()" />
+        </div>
+
+        <!-- User Credit -->
+        <div class="credit-box">
+          <hr class="credit-hr" />
+          <span class="credit-link"
+            >Feature added by
+            <a href="https://github.com/PranavThampi">@PranavThampi</a></span
+          >
         </div>
       </div>
     </div>
