@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="canonical"
+      href="https://webdevhub.herokuapp.com/hex-to-filter"
+    />
+
+    <!-- Include the header HTML which contains universal tags, references and other metadata. -->
+    <%- include("../header.ejs") %>
+  </head>
+
+  <body>
+    <div class="index-main">
+      <div class="main-content-container">
+        <div class="feature-main-header main-header">
+          <h1>Epoch to Date Converter</h1>
+          <span>Convert Epoch Time to Readable Data Time.</span>
+          <hr />
+        </div>
+
+        <!-- Code Formatter Containers -->
+        <div class="code-formatter-header">
+        </div>
+        <div class="code-formatter-container">
+          <div class="converter-container">
+            <span>Epoch Time</span>
+            <hr />
+            <textarea
+              id="epoch-time"
+              rows="1"
+              cols="10"
+              placeholder="1234567890"
+            ></textarea>
+          </div>
+          <div class="converter-container">
+            <span>Standard Date Time</span>
+            <hr />
+            <textarea id="converted-time" rows="1" cols="10"></textarea>
+            <button class="epoch-copy" id="copy" onclick="copyText()">
+              <img src="/icons/copy.png" alt="copy" />
+            </button>
+            <span class="formatter-popup epoch-copy-text" id="popup-text">Copied!</span>
+          </div>
+        </div>
+
+        <!-- Code Formatter Controls -->
+        <div class="epoch-converter-controls">
+          <input type="button" value="Convert" onclick="convertTime()" />
+        </div>
+
+        <!-- User Credit -->
+        <div class="credit-box">
+          <hr class="credit-hr" />
+          <span class="credit-link"
+            >Feature added by
+            <a href="https://github.com/PranavThampi">@PranavThampi</a></span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Include the footer HTML at the end of the page with copyright notice and other links. -->
+    <%- include("../footer.ejs") %>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/converters/epoch-time-converter.js"></script>
+  </body>
+</html>
