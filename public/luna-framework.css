@@ -545,7 +545,8 @@ pre {
         top: 56px;
         margin-left: -2.9rem;
         max-height: 0;
-        width: calc(100% - 3.4rem);
+        width: calc(100% - 1.1rem);
+        padding-right: 1.6rem;
         transition: all 0.5s ease-in-out;
     }
     .navbar ul {
