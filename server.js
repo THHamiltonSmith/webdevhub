@@ -9,6 +9,9 @@ const app = express();
 const server = require("http").Server(app);
 const convert = require("xml-js");
 const colourConvert = require("color-convert");
+const bodyparser = require("body-parser");
+const multer = require("multer");
+const sharp = require("sharp");
 
 // Handle 'sitemap.xml' and 'robots.txt' functionality so crawl bots can access them.
 app.get("/robots.txt", function (req, res) {
@@ -37,13 +40,20 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Use body parser
+app.use(bodyparser.urlencoded({ extended: true }));
+  
+// Define storage as buffer for multer image uploads
+const storage = multer.memoryStorage();
+const upload = multer({storage: storage})
+
 // Home
 app.get("/", (req, res) => {
-  // Render the page with given paramaters.
-  res.render("index", {
-    title: "Home",
-  });
-});
+    // Render the page with given paramaters.
+    res.render("converters/test", {
+        title: "Home",
+    });
+})
 app.get("/code-formatter", (req, res) => {
   // Render the page with given paramaters.
   res.render("formatters/code-formatter", {
@@ -62,6 +72,21 @@ app.get("/image-converter", (req, res) => {
     title: "Image Converter",
   });
 });
+app.post("/image-converter/upload", upload.single('form'), (req, res) => {
+    const valid = req.file && !(req.body.format === "none") && !(req.body.format === req.file.mimetype.slice(6))
+    if (valid) {
+        (async ()=> {
+            try {
+                const {data, info} = await sharp(req.file.buffer)
+                .toFile("public/uploads/converted."+req.body.format, (err, info) => {
+                    console.log(info)
+                });
+            } catch(err) {
+                console.error(err);
+            }
+        })()
+    }
+})
 app.get("/lorem-ipsum-generator", (req, res) => {
   // Render the page with given paramaters.
   res.render("text/lorem-ipsum-generator", {
