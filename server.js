@@ -12,6 +12,8 @@ const colourConvert = require("color-convert");
 const bodyparser = require("body-parser");
 const multer = require("multer");
 const sharp = require("sharp");
+const fs = require("fs");
+const path = require("path");
 
 // Handle 'sitemap.xml' and 'robots.txt' functionality so crawl bots can access them.
 app.get("/robots.txt", function (req, res) {
@@ -50,7 +52,7 @@ const upload = multer({storage: storage})
 // Home
 app.get("/", (req, res) => {
     // Render the page with given paramaters.
-    res.render("converters/test", {
+    res.render("index", {
         title: "Home",
     });
 })
@@ -72,7 +74,17 @@ app.get("/image-converter", (req, res) => {
     title: "Image Converter",
   });
 });
-app.post("/image-converter/upload", upload.single('form'), (req, res) => {
+app.post("/image-converter/upload", upload.single('image'), (req, res) => {
+    const dir = "public/uploads"
+    fs.readdir(dir, (err, files) => {
+        if (err) console.err(err);
+        
+        for (const file of files) {
+            fs.unlink(path.join(dir, file), err => {
+                if (err) console.err(err);
+            })
+        }
+    })
     const valid = req.file && !(req.body.format === "none") && !(req.body.format === req.file.mimetype.slice(6))
     if (valid) {
         (async ()=> {
