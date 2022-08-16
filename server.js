@@ -77,11 +77,11 @@ app.get("/image-converter", (req, res) => {
 app.post("/image-converter/upload", upload.single('image'), (req, res) => {
     const dir = "public/uploads"
     fs.readdir(dir, (err, files) => {
-        if (err) console.err(err);
+        if (err) console.error(err);
         
         for (const file of files) {
             fs.unlink(path.join(dir, file), err => {
-                if (err) console.err(err);
+                if (err) console.error(err);
             })
         }
     })
@@ -97,7 +97,15 @@ app.post("/image-converter/upload", upload.single('image'), (req, res) => {
                 console.error(err);
             }
         })()
-    }
+    }   
+})
+app.get("/image-converter/download", (req, res) => {
+    const dir = "public/uploads"
+    fs.readdir(dir, (err, files) => {
+        if (err) console.error(err);
+        const img = files[0];
+        res.download(`${__dirname}/public/uploads/`+img);
+    })
 })
 app.get("/lorem-ipsum-generator", (req, res) => {
   // Render the page with given paramaters.
