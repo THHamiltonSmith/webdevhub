@@ -98,7 +98,7 @@ app.post("/image-converter/upload", upload.single('image'), (req, res) => {
             try {
                 const {data, info} = await sharp(req.file.buffer)
                 .toFile("public/uploads/converted."+req.body.format, (err, info) => {
-                    console.log(info)
+                    // console.log(req.body.format, info)
                 });
             } catch(err) {
                 console.error(err);
