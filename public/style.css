@@ -552,6 +552,7 @@ footer {
 .image-converter-download {
     display: none;
     margin: 20px;
+    text-align: center;
 }
 
 .image-converter-download button {

@@ -9,6 +9,12 @@ const app = express();
 const server = require("http").Server(app);
 const convert = require("xml-js");
 const colourConvert = require("color-convert");
+const bodyparser = require("body-parser");
+const multer = require("multer");
+const sharp = require("sharp");
+const fs = require("fs");
+const path = require("path");
+const { NONAME } = require("dns");
 
 // Handle 'sitemap.xml' and 'robots.txt' functionality so crawl bots can access them.
 app.get("/robots.txt", function (req, res) {
@@ -37,13 +43,20 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Use body parser
+app.use(bodyparser.urlencoded({ extended: true }));
+  
+// Define storage as buffer for multer image uploads
+const storage = multer.memoryStorage();
+const upload = multer({storage: storage})
+
 // Home
 app.get("/", (req, res) => {
-  // Render the page with given paramaters.
-  res.render("index", {
-    title: "Home",
-  });
-});
+    // Render the page with given paramaters.
+    res.render("index", {
+        title: "Home",
+    });
+})
 app.get("/code-formatter", (req, res) => {
   // Render the page with given paramaters.
   res.render("formatters/code-formatter", {
@@ -62,6 +75,47 @@ app.get("/image-converter", (req, res) => {
     title: "Image Converter",
   });
 });
+app.post("/image-converter/upload", upload.single('image'), (req, res) => {
+    const dir = "public/uploads"
+
+    // deletes the previous converted files
+    fs.readdir(dir, (err, files) => {
+        if (err) console.error(err);
+        
+        for (const file of files) {
+            fs.unlink(path.join(dir, file), err => {
+                if (err) console.error(err);
+            })
+        }
+    })
+
+    // verfies that image is uploaded, format is not none and selected format is not same as image
+    const valid = req.file && !(req.body.format === "none") && !(req.body.format === req.file.mimetype.slice(6))
+
+    // if all above requirements are satisfied, image is converted and saved to public/uploads
+    if (valid) {
+        (async ()=> {
+            try {
+                const {data, info} = await sharp(req.file.buffer)
+                .toFile("public/uploads/converted."+req.body.format, (err, info) => {
+                    // console.log(req.body.format, info)
+                });
+            } catch(err) {
+                console.error(err);
+            }
+        })()
+    }   
+})
+
+// downloads the converted image
+app.get("/image-converter/download", (req, res) => {
+    const dir = "public/uploads"
+    fs.readdir(dir, (err, files) => {
+        if (err) console.error(err);
+        const img = files[0];
+        res.download(`${__dirname}/public/uploads/`+img);
+    })
+})
 app.get("/lorem-ipsum-generator", (req, res) => {
   // Render the page with given paramaters.
   res.render("text/lorem-ipsum-generator", {

@@ -25,10 +25,10 @@
                 </div>
 
                 <!-- upload image and preview-->
-                <div class="image-converter">
+                <form action="/image-converter/upload" enctype="multipart/form-data" method="post" class="image-converter">
 
                     <!-- loadfile -->
-                    <input class="image-converter-loadfile" id="loadfile" type="file" accept="image/png, image/jpeg">
+                    <input class="image-converter-loadfile" id="loadfile" type="file" accept="image/png, image/jpeg" name="image">
 
                     <!-- image preview -->
                     <div class="image-converter-preview-container" id="preview-container">
@@ -41,12 +41,14 @@
 
                         <!-- dropdown menu -->
                         <label for="format">Select format</label>   
-                        <select id="format">
+                        <select id="format" name="format">
                             <option value = "none">-- choose --</option>
-                            <option value = "png">PNG</option> 
-                            <option value = "jpeg">JPEG</option>
-                            <option value = "bmp">BMP</option>
+                            <option value = "jpeg">JPEG</option> 
+                            <option value = "png">PNG</option>
+                            <option value = "jp2">JP2</option>
                             <option value = "tiff">TIFF</option>
+                            <option value = "avif">AVIF</option>
+                            <option value = "raw">RAW</option>
                         </select>
 
                         <!-- convert button -->
@@ -64,13 +66,15 @@
                         <img src="../icons/check.png">
                         <span id="success-text"></span>
                     </div>
+                </form>
 
-                    <!-- Download converted image -->
-                    <a class="image-converter-download"  id="download" href="" download="bro">
-                        <button>Download</button>
-                    </a>
+                <!-- Download converted image -->
+                <form method="get" action="/image-converter/download" class="image-converter-download"  id="download">
+                    <button>Download</button>
+                </form>
 
-                    <!-- User Credit -->
+                <!-- User Credit -->
+                <div class="credit-box">
                     <hr class="credit-hr">
                     <span class="credit-link">Feature added by <a href="https://github.com/foobar41">@foobar41</a></span>
                 </div>
