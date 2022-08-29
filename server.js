@@ -14,6 +14,7 @@ const multer = require("multer");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
+const { NONAME } = require("dns");
 
 // Handle 'sitemap.xml' and 'robots.txt' functionality so crawl bots can access them.
 app.get("/robots.txt", function (req, res) {
@@ -76,6 +77,8 @@ app.get("/image-converter", (req, res) => {
 });
 app.post("/image-converter/upload", upload.single('image'), (req, res) => {
     const dir = "public/uploads"
+
+    // deletes the previous converted files
     fs.readdir(dir, (err, files) => {
         if (err) console.error(err);
         
@@ -85,7 +88,11 @@ app.post("/image-converter/upload", upload.single('image'), (req, res) => {
             })
         }
     })
+
+    // verfies that image is uploaded, format is not none and selected format is not same as image
     const valid = req.file && !(req.body.format === "none") && !(req.body.format === req.file.mimetype.slice(6))
+
+    // if all above requirements are satisfied, image is converted and saved to public/uploads
     if (valid) {
         (async ()=> {
             try {
@@ -99,6 +106,8 @@ app.post("/image-converter/upload", upload.single('image'), (req, res) => {
         })()
     }   
 })
+
+// downloads the converted image
 app.get("/image-converter/download", (req, res) => {
     const dir = "public/uploads"
     fs.readdir(dir, (err, files) => {
